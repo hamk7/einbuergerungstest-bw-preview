@@ -1,23 +1,30 @@
-EINBÜRGERUNGSTEST BW – VERSION 3.2
+EINBÜRGERUNGSTEST BW – VERSION 3.3 PREVIEW
 
-Druckverlauf:
-- Jeder neu erzeugte Papierbogen wird mit seinen exakten 33 Katalogfragen gespeichert.
-- Statistik > Druckverlauf:
-  - exakt denselben Test digital als Prüfung wiederholen
-  - genau diese 33 Fragen als Lernset öffnen
-  - denselben Bogen erneut öffnen / drucken
+Diese Version ist für das GitHub-Preview-Repository gedacht.
 
-QR-Code auf Papier:
-- Kleiner QR-Code auf der ersten Seite.
-- Kompletter Bogen: unten rechts auf dem Deckblatt.
-- „Nur Fragen“: auf der ersten Fragenseite.
-- Der QR-Link enthält die 33 Katalogfragen direkt.
-- Dadurch funktioniert der QR-Code auch auf einem anderen Gerät ohne Konto oder Datenbank.
-- Nach dem Scan:
-  - Digital als Prüfung
-  - Diese 33 Fragen lernen
-- Die digitale Prüfung verwendet exakt dieselben 33 Fragen in derselben Reihenfolge.
+Wichtig:
+- Erkennt URLs/Pfade mit „preview“ und speichert Lernfortschritt, Sterne, Prüfungen und Einstellungen getrennt von der stabilen hamk7.github.io-Seite.
+- Auf der Preview erscheint oben klein „TESTVERSION 3.3“.
+- Die stabile Hauptseite wird dadurch nicht verändert.
 
-Technik:
-- QR-Code wird im Browser mit QRCode.js erzeugt.
-- Bestehender Fortschritt, Sterne, Filter, Dark Mode und Prüfungsverlauf bleiben kompatibel.
+Änderungen:
+- Untertitel unter „Einbürgerungstest Baden-Württemberg“ entfernt.
+- Lern-Fortschrittsleiste im Fragenfenster entfernt.
+- Lernfilter farbig.
+- Offene/Neue Fragen neutral-grau; Bearbeitet blau.
+- Zurück/Nächste im Lernmodus fest am unteren Bildschirmrand.
+- Buttons nutzen touch-action: manipulation gegen unbeabsichtigten Doppel-Tipp-Zoom.
+- Verwaiste versteckte Kompatibilitäts-Controls werden sicher ausgeblendet.
+- 310 türkische Fragen + 1.240 türkische Antworten + türkische Erklärungen lokal eingebettet.
+- DDR und wichtige deutsche Eigennamen/Abkürzungen bleiben erhalten.
+- Erklärung öffnet sich nach dem Antworten NICHT automatisch.
+- Optionaler Menüschalter „Muster-Test-Schrift“.
+- Neuer PDF-Workflow:
+  1. Papier-Test erzeugen
+  2. PDF erstellen
+  3. Nach Fertigstellung „PDF teilen / drucken“ oder „PDF herunterladen“
+- Auf iPhone/iPad wird für eine fertige PDF-Datei die Web Share API benutzt, sofern unterstützt.
+- Das alte window.open()/Popup-Druckverfahren wird für diesen Button nicht mehr verwendet.
+
+Hinweis:
+html2pdf.js wird in dieser Preview in Version 0.10.1 von cdnjs geladen.
