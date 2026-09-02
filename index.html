@@ -678,7 +678,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
 </head>
-<body><div id="previewBadgeV33" class="preview-badge-v33" hidden>TESTVERSION 3.3</div>
+<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.3.2</div>
 <div class="top-actions" aria-label="Schnellaktionen">
   <button id="pauseExamTop" class="icon-btn" type="button" aria-label="Prüfung pausieren" hidden><span class="pause-glyph">Ⅱ</span></button>
   <button id="menuToggle" class="icon-btn menu-icon" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -688,10 +688,20 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
   <div class="menu-head"><div><b>Einstellungen</b><div class="small muted">Einbürgerungstest BW</div></div><button id="menuClose" class="icon-btn mini-close" type="button" aria-label="Menü schließen" tabindex="-1">×</button></div>
   <div class="menu-scroll">
     <section class="menu-section"><h3>◐ Erscheinungsbild</h3><div class="segmented" id="appearanceControl"><button type="button" data-theme="system">System</button><button type="button" data-theme="light">Hell</button><button type="button" data-theme="dark">Dunkel</button></div></section>
+    <section class="menu-section exam-font-section-v332">
+      <h3>📝 Prüfungsdarstellung</h3>
+      <label class="menu-switch">
+        <span>
+          <b>𝑨 Muster-Test-Schrift</b>
+          <small>Fragen wie im BAMF-Muster: Arial/Helvetica, kursiv und kräftiger. Antworten bleiben normal lesbar.</small>
+        </span>
+        <input id="menuTestFontV33" type="checkbox">
+      </label>
+      <div class="exam-font-preview-v332"><i>Was passierte am <b>9. November 1938</b> in Deutschland?</i></div>
+    </section>
     <section class="menu-section"><h3>📚 Lernen</h3>
       <label class="menu-switch"><span><b>🔀 Zufällige Reihenfolge</b><small>Gilt auch für den Schalter im Lernmodus. Jede Frage des Lernsets kommt einmal vor, bevor neu gemischt wird.</small></span><input id="menuRandom" type="checkbox"></label>
       <label class="menu-switch"><span><b>🇹🇷 Türkisch-Schalter anzeigen</b><small>Standardmäßig an. Legt nur fest, ob der Türkisch-Schalter beim Lernen sichtbar ist.</small></span><input id="menuTurkish" type="checkbox"></label>
-      <label class="menu-switch"><span><b>𝑨 Muster-Test-Schrift</b><small>Fragen näher am BAMF-Muster darstellen: Arial/Helvetica, kursiv und mit stärkeren Hervorhebungen.</small></span><input id="menuTestFontV33" type="checkbox"></label>
     </section>
     <section class="menu-section"><h3>🎯 Lernziel</h3>
       <label class="menu-switch"><span><b>Lernziel aktivieren</b><small>Zeigt dir in der Übersicht, wie viele Tage bis zu deinem Wunschdatum bleiben und wie weit du auf dem Weg zu 620/620 Lernpunkten bist. Es verändert die Prüfung oder Bewertung nicht.</small></span><input id="goalEnabled" type="checkbox"></label>
@@ -711,7 +721,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
       <div class="menu-stack"><button id="exportProgress" class="btn" type="button">Fortschritt exportieren</button><label class="btn" for="importFile" style="cursor:pointer;text-align:center">Fortschritt importieren</label><input id="importFile" type="file" accept="application/json" hidden></div>
       <p id="backupSupportHint" class="small muted">Der Fortschritt wird nach jeder Änderung lokal gespeichert.</p>
     </section>
-    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.3 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
+    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.3.2 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
 <li>Menü oben rechts mit Hell / Dunkel / System</li><li>Mehrfachfilter mit Live-Zahlen und ausgegrauten 0-Treffern</li><li>Kompakter Lernmodus mit ★, 💡, 🇹🇷- und 🔀-Schaltern</li><li>Lernziel zeigt Resttage, empfohlenes Tagespensum und heutigen Fortschritt</li><li>Prüfungsauswertung und Prüfungsverlauf mit Frage-Details überarbeitet</li>
 <li>Pause nur während einer laufenden Prüfung; Fortsetzen über ▶ oder Pause-Fenster</li>
 <li>Fragen mit ★ markieren und gezielt lernen</li>
@@ -881,7 +891,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
         <b id="learnFilterLabelV32">Alle Fragen</b>
         <span id="learnFilterCountV32" class="small muted">310 Fragen</span>
       </div>
-      <button id="changeLearnFilter" class="btn compact" type="button">Filter ändern</button>
+      <button id="changeLearnFilter" class="btn compact" type="button" aria-label="Filter ändern" title="Filter ändern">Filter</button>
 
       <label class="study-switch top-study-switch" title="Zufällige Reihenfolge">
         <span>🔀</span>
@@ -1540,10 +1550,56 @@ document.getElementById("exportProgress").addEventListener("click",()=>{
   a.href=URL.createObjectURL(blob);a.download="Einbuergerungstest_BW_Fortschritt.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 });
 document.getElementById("importFile").addEventListener("change",async e=>{
-  const f=e.target.files[0];if(!f)return;
-  try{const data=JSON.parse(await f.text());if(!data.progress)throw new Error("Ungültige Datei");
-    progress=data.progress;examHistory=Array.isArray(data.examHistory)?data.examHistory:[];writeJSON(PKEY,progress);writeJSON(HKEY,examHistory);renderOverview();renderStats();renderLearn();alert("Fortschritt importiert.");
-  }catch(err){alert("Die Datei konnte nicht importiert werden.")}e.target.value="";
+  const f=e.target.files?.[0];if(!f)return;
+  try{
+    let text=(await f.text()).replace(/^\uFEFF/,"").trim();
+    let data=JSON.parse(text);
+
+    if(data&&typeof data==="object"&&data.data&&!data.progress){
+      data=typeof data.data==="string"?JSON.parse(data.data):data.data;
+    }
+
+    if(!data||typeof data!=="object"||!data.progress||typeof data.progress!=="object"||Array.isArray(data.progress)){
+      throw new Error("Kein gültiger Lernfortschritt in dieser Datei.");
+    }
+
+    progress=data.progress;
+    examHistory=Array.isArray(data.examHistory)?data.examHistory:[];
+
+    // Zuerst sicher speichern.
+    writeJSON(PKEY,progress);
+    writeJSON(HKEY,examHistory);
+
+    if(Array.isArray(data.favorites)&&typeof favorites!=="undefined"){
+      favorites=new Set(data.favorites.map(Number).filter(Number.isFinite));
+      if(typeof saveFavorites==="function")saveFavorites();
+    }
+
+    if(typeof data.randomOrder==="boolean"&&typeof randomOrder!=="undefined"){
+      randomOrder=data.randomOrder;
+      if(typeof RKEY!=="undefined")writeJSON(RKEY,randomOrder);
+    }
+
+    try{
+      localStorage.setItem(
+        LASTKEY,
+        data.updatedAt||data.exportedAt||new Date().toISOString()
+      );
+    }catch{}
+
+    const answered=Object.values(progress).filter(v=>
+      Number(v?.correct||0)+Number(v?.wrong||0)>0
+    ).length;
+
+    alert(`Fortschritt erfolgreich importiert · ${answered} bearbeitete Fragen.\n\nDie Seite wird jetzt einmal neu geladen.`);
+    setTimeout(()=>location.reload(),150);
+
+  }catch(err){
+    console.error("Import V3.3.2:",err);
+    alert("Import nicht möglich: "+(err?.message||"Die Datei ist nicht kompatibel."));
+  }finally{
+    e.target.value="";
+  }
 });
 document.getElementById("resetProgress").addEventListener("click",()=>{
   if(!confirm("Wirklich den gesamten Lernstand und Prüfungsverlauf löschen?"))return;
@@ -1938,7 +1994,7 @@ renderOverview();renderLearn();renderStats();loadAnswerKey();loadTranslations();
 <script>
 (function(){
   if("serviceWorker" in navigator && location.protocol.indexOf("http")===0){
-    navigator.serviceWorker.register("./sw.js").catch(()=>{});
+    navigator.serviceWorker.register("./sw.js",{updateViaCache:"none"}).then(r=>r.update()).catch(()=>{});
   }
   if(navigator.storage && navigator.storage.persist){
     navigator.storage.persist().catch(()=>{});
@@ -3286,7 +3342,7 @@ renderOverview();renderLearn();renderStats();loadAnswerKey();loadTranslations();
 .paper-history-ids-v32{margin-top:8px;font-size:11px;color:var(--muted);line-height:1.4}
 
 
-/* ===== Version 3.3 Preview ===== */
+/* ===== Version 3.3.2 Preview ===== */
 .preview-badge-v33{
   position:fixed;z-index:24;left:max(10px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));
   padding:4px 8px;border-radius:999px;background:#6b4fd3;color:#fff;
@@ -3354,6 +3410,87 @@ body.bamf-font-v33 #examAnswers{
 @media(max-width:600px){
   #learn{padding-bottom:96px}
   .learn-bottom-nav{width:calc(100% - 20px)}
+}
+
+
+/* ===== Version 3.3.2 Preview ===== */
+.hero>div:first-child>.muted{display:none!important}
+#learn .progressline,#learnProgress{display:none!important}
+
+#learn .learn-topline-v32{
+  display:grid!important;
+  grid-template-columns:minmax(86px,1fr) auto auto auto!important;
+  align-items:center!important;
+  gap:6px!important;
+  flex-wrap:nowrap!important;
+  width:100%!important;
+}
+#learn .learn-filter-summary-v32{
+  min-width:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+}
+#learn .learn-filter-summary-v32>*{
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+  white-space:nowrap!important;
+}
+#learn #changeLearnFilter{
+  margin:0!important;
+  padding:7px 10px!important;
+  min-height:38px!important;
+  white-space:nowrap!important;
+}
+#learn .top-study-switch{
+  margin:0!important;
+  min-width:0!important;
+  min-height:38px!important;
+  padding:4px 6px!important;
+  white-space:nowrap!important;
+}
+#learn .top-study-switch>span{font-size:18px!important}
+#learn .top-study-switch i{width:32px!important;height:19px!important}
+#learn .top-study-switch i:after{width:15px!important;height:15px!important}
+#learn .top-study-switch input:checked+i:after{transform:translateX(13px)!important}
+
+.exam-font-section-v332{border-left:3px solid var(--blue)}
+.exam-font-preview-v332{
+  margin-top:8px;padding:9px 10px;border:1px solid var(--line);
+  border-radius:9px;background:var(--bg);font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;line-height:1.25
+}
+body.bamf-font-v33 #learnQuestion,
+body.bamf-font-v33 #examQuestion{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:italic!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+}
+body.bamf-font-v33 #learnAnswers,
+body.bamf-font-v33 #examAnswers{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:normal!important;
+  font-weight:400!important;
+}
+
+.preview-badge-v33{
+  display:block!important;
+  position:fixed!important;
+  top:auto!important;
+  left:10px!important;
+  bottom:calc(env(safe-area-inset-bottom) + 8px)!important;
+  z-index:70!important;
+  font-size:9px!important;
+  opacity:.88!important;
+}
+
+@media(max-width:430px){
+  #learn .learn-topline-v32{
+    grid-template-columns:minmax(75px,1fr) auto auto auto!important
+  }
+  #learn .learn-filter-summary-v32 .small{font-size:11px!important}
+  #learn #learnFilterCountV32{display:none!important}
+  #learn #changeLearnFilter{padding-inline:8px!important}
 }
 
 </style></head><body>
@@ -3626,7 +3763,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Preview is intentionally isolated from the stable github.io page.
   const previewBadge=document.getElementById("previewBadgeV33");
-  if(window.__EBT_PREVIEW__&&previewBadge)previewBadge.hidden=false;
+  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.3.2";}
 
   // Fully local Turkish dataset. Do not mutate QUESTIONS or German answers.
   const previousTrForV33=trFor;
@@ -3786,9 +3923,16 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Version display.
   const versionSmall=document.querySelector("#versionToggle small");
-  if(versionSmall)versionSmall.textContent="Version 3.3 · Preview";
+  if(versionSmall)versionSmall.textContent="Version 3.3.2 · Preview";
 })();
 </script>
 
+
+
+
+<script>
+window.__EBT_BUILD__="3.3.2-preview";
+document.documentElement.dataset.ebtBuild="3.3.2-preview";
+</script>
 </body>
 </html>

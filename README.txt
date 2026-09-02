@@ -1,4 +1,4 @@
-EINBÜRGERUNGSTEST BW – VERSION 3.3 PREVIEW
+EINBÜRGERUNGSTEST BW – VERSION 3.3.2 PREVIEW
 
 Diese Version ist für das GitHub-Preview-Repository gedacht.
 
@@ -28,3 +28,21 @@ Wichtig:
 
 Hinweis:
 html2pdf.js wird in dieser Preview in Version 0.10.1 von cdnjs geladen.
+
+
+3.3.1 Import-Fix:
+- Alte V3.2-Exports werden ausdrücklich akzeptiert.
+- Fortschritt wird zuerst gespeichert; die Oberfläche wird erst danach aktualisiert.
+- Ein Darstellungsfehler kann einen erfolgreichen Import nicht mehr als fehlgeschlagen melden.
+- Merkfragen und Zufallsmodus werden übernommen, sofern im Export vorhanden.
+- Fehlermeldungen nennen jetzt den konkreten Grund.
+
+
+3.3.2:
+- Import direkt repariert: nur noch ein Import-Handler und nur eine Meldung.
+- Nach erfolgreichem Speichern wird die Seite neu geladen.
+- Filter, Zufall und Türkisch bleiben auf Mobilgeräten in einer Zeile.
+- „Muster-Test-Schrift“ ist ein eigener Menüabschnitt mit Vorschau.
+- Untertitel und falsche Katalogpositions-Leiste werden zusätzlich per CSS ausgeblendet.
+- Sichtbarer Build-Hinweis „TESTVERSION 3.3.2“.
+- Preview-HTML wird vom Service Worker nicht mehr zwischengespeichert.
