@@ -674,11 +674,133 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
 }
 
 #historyDetails{display:none!important}
+
+
+/* ===== Version 3.4 Preview - echte Hauptseiten-Styles ===== */
+/* Vorherige 3.3-Stile waren versehentlich in der alten Druck-Popup-Vorlage. */
+#learn .progressline,#learnProgress{display:none!important}
+#learn{padding-bottom:104px}
+
+#learn .learn-topline-v32{
+  display:grid!important;
+  grid-template-columns:minmax(88px,1fr) auto auto auto!important;
+  align-items:center!important;
+  gap:6px!important;
+  flex-wrap:nowrap!important;
+  width:100%!important;
+  margin-bottom:9px!important;
+}
+#learn .learn-filter-summary-v32{min-width:0!important;margin:0!important;overflow:hidden!important}
+#learn .learn-filter-summary-v32>*{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#learn #changeLearnFilter{margin:0!important;padding:7px 10px!important;min-height:38px!important;white-space:nowrap!important}
+#learn .top-study-switch{margin:0!important;min-width:0!important;min-height:38px!important;padding:4px 6px!important;white-space:nowrap!important}
+#learn .top-study-switch>span{font-size:18px!important}
+#learn .top-study-switch i{width:32px!important;height:19px!important}
+#learn .top-study-switch i:after{width:15px!important;height:15px!important}
+#learn .top-study-switch input:checked+i:after{transform:translateX(13px)!important}
+
+/* Navigation bleibt im Lernmodus immer an derselben Bildschirmstelle. */
+.learn-bottom-nav{
+  position:fixed!important;z-index:34!important;
+  left:50%!important;transform:translateX(-50%)!important;
+  bottom:max(7px,env(safe-area-inset-bottom))!important;
+  width:min(1100px,calc(100% - 20px))!important;
+  margin:0!important;padding:7px!important;
+  background:color-mix(in srgb,var(--bg) 94%,transparent)!important;
+  border:1px solid var(--line)!important;border-radius:13px!important;
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:0 -6px 22px rgba(0,0,0,.13)!important;
+}
+.btn,.answer,.tab,.filter,.qtile,.icon-btn{touch-action:manipulation}
+
+/* BAMF-nahe Prüfungsdarstellung. Auf iOS unterscheidet sich Arial sichtbar von SF Pro. */
+body.bamf-font-v33 #learnQuestion,body.bamf-font-v33 #examQuestion,
+body.bamf-font-v34 #learnQuestion,body.bamf-font-v34 #examQuestion{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:italic!important;font-weight:700!important;
+  letter-spacing:-.01em!important;line-height:1.25!important;
+}
+body.bamf-font-v33 #learnAnswers,body.bamf-font-v33 #examAnswers,
+body.bamf-font-v34 #learnAnswers,body.bamf-font-v34 #examAnswers{
+  font-family:Arial,Helvetica,sans-serif!important;font-style:normal!important;font-weight:400!important;
+}
+body.bamf-font-v34 #learnQuestion strong,body.bamf-font-v34 #examQuestion strong{font-weight:900!important}
+.exam-font-section-v332{border-left:3px solid var(--blue)!important}
+.exam-font-preview-v332{font-family:Arial,Helvetica,sans-serif!important;font-style:italic!important;font-weight:700!important}
+
+/* Lernfilterfarben */
+.learn-filter-choice-v32:has(input[data-lf="new"]){border-left:5px solid #9aa3b2;background:var(--gray-soft)}
+.learn-filter-choice-v32:has(input[data-lf="right1"]){border-left:5px solid #88c58e;background:var(--green1-soft)}
+.learn-filter-choice-v32:has(input[data-lf="safe"]){border-left:5px solid #47a271;background:var(--green-soft)}
+.learn-filter-choice-v32:has(input[data-lf="wrong1"]){border-left:5px solid #e59b51;background:var(--orange-soft)}
+.learn-filter-choice-v32:has(input[data-lf="mixed"]){border-left:5px solid #dfbd4e;background:var(--yellow-soft)}
+.learn-filter-choice-v32:has(input[data-lf="problem"]){border-left:5px solid #d96565;background:var(--red-soft)}
+.learn-filter-choice-v32:has(input[data-lf="bw"]){border-left:5px solid #5b83e6;background:var(--blue-soft)}
+.learn-filter-choice-v32:has(input[data-lf="favorite"]){border-left:5px solid #d3a91e;background:var(--yellow-soft)}
+.learn-filter-choice-v32:has(input[data-lf="lastExamErrors"]){border-left:5px solid #8a67d5;background:#eee9fb}
+html[data-theme="dark"] .learn-filter-choice-v32:has(input[data-lf="lastExamErrors"]){background:#29223b}
+
+.pdf-actions-v33{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pdf-status-v33{margin-top:9px;min-height:18px}
+#pdfOpenV34.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.pdf-engine-ok-v34{color:var(--green);font-weight:700}
+.pdf-engine-error-v34{color:var(--red);font-weight:700}
+
+.preview-badge-v33{display:block!important;position:fixed!important;left:8px!important;top:max(5px,env(safe-area-inset-top))!important;bottom:auto!important;z-index:75!important;font-size:9px!important;opacity:.82!important}
+
+@media(max-width:430px){
+  #learn .learn-topline-v32{grid-template-columns:minmax(70px,1fr) auto auto auto!important;gap:5px!important}
+  #learn #learnFilterCountV32{display:none!important}
+  #learn #changeLearnFilter{padding-inline:8px!important}
+  .learn-bottom-nav{width:calc(100% - 14px)!important}
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+
+<style id="v341-real-exam-style">
+/* Version 3.4.1 – Prüfungsdarstellung.
+   Grundtext der Frage NICHT komplett fett. Nur <strong> ist fett-kursiv. */
+body.bamf-font-v34 #learnQuestion,
+body.bamf-font-v34 #examQuestion,
+body.bamf-font-v33 #learnQuestion,
+body.bamf-font-v33 #examQuestion{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:italic!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+  font-synthesis:none;
+}
+body.bamf-font-v34 #learnQuestion strong,
+body.bamf-font-v34 #examQuestion strong,
+body.bamf-font-v33 #learnQuestion strong,
+body.bamf-font-v33 #examQuestion strong{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:italic!important;
+  font-weight:700!important;
+}
+body.bamf-font-v34 #learnAnswers,
+body.bamf-font-v34 #examAnswers,
+body.bamf-font-v33 #learnAnswers,
+body.bamf-font-v33 #examAnswers{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:normal!important;
+  font-weight:400!important;
+}
+.exam-font-preview-v332{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-style:italic!important;
+  font-weight:400!important;
+}
+.exam-font-preview-v332 b,
+.exam-font-preview-v332 strong{
+  font-weight:700!important;
+  font-style:italic!important;
+}
+</style>
+
 </head>
-<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.3.2</div>
+<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.4.1</div>
 <div class="top-actions" aria-label="Schnellaktionen">
   <button id="pauseExamTop" class="icon-btn" type="button" aria-label="Prüfung pausieren" hidden><span class="pause-glyph">Ⅱ</span></button>
   <button id="menuToggle" class="icon-btn menu-icon" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -693,7 +815,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
       <label class="menu-switch">
         <span>
           <b>𝑨 Muster-Test-Schrift</b>
-          <small>Fragen wie im BAMF-Muster: Arial/Helvetica, kursiv und kräftiger. Antworten bleiben normal lesbar.</small>
+          <small>Fragen im Prüfungsstil: Arial kursiv in normaler Stärke; nur hervorgehobene Stellen werden fett-kursiv. Antworten bleiben Arial normal.</small>
         </span>
         <input id="menuTestFontV33" type="checkbox">
       </label>
@@ -721,7 +843,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
       <div class="menu-stack"><button id="exportProgress" class="btn" type="button">Fortschritt exportieren</button><label class="btn" for="importFile" style="cursor:pointer;text-align:center">Fortschritt importieren</label><input id="importFile" type="file" accept="application/json" hidden></div>
       <p id="backupSupportHint" class="small muted">Der Fortschritt wird nach jeder Änderung lokal gespeichert.</p>
     </section>
-    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.3.2 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
+    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.4.1 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
 <li>Menü oben rechts mit Hell / Dunkel / System</li><li>Mehrfachfilter mit Live-Zahlen und ausgegrauten 0-Treffern</li><li>Kompakter Lernmodus mit ★, 💡, 🇹🇷- und 🔀-Schaltern</li><li>Lernziel zeigt Resttage, empfohlenes Tagespensum und heutigen Fortschritt</li><li>Prüfungsauswertung und Prüfungsverlauf mit Frage-Details überarbeitet</li>
 <li>Pause nur während einer laufenden Prüfung; Fortsetzen über ▶ oder Pause-Fenster</li>
 <li>Fragen mit ★ markieren und gezielt lernen</li>
@@ -984,6 +1106,7 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
         <i></i>
       </label>
         <button id="generatePaperExam" class="btn" type="button">🖨️ Papier-Test erzeugen</button>
+        <button id="pdfSystemTestV34" class="btn" type="button">🧪 PDF-Systemtest</button>
         <div class="print-note">Erstellt einen 14-seitigen A4-Übungstest mit 30 allgemeinen Fragen + 3 BW-Fragen nach Seitenaufbau, Anleitung und Ankreuzlogik des bereitgestellten Musterbogens. Gedacht zum Ausdrucken und handschriftlichen Üben.</div>
       </div>
     </div>
@@ -997,11 +1120,12 @@ body.print-here-v32 #printHereToolbarV32{display:flex!important}
       <div id="paperPreviewMeta" class="paper-preview-meta small muted"></div>
       <div id="pdfStatusV33" class="pdf-status-v33 small muted"></div>
       <div id="pdfActionsV33" class="pdf-actions-v33" hidden>
-        <button id="pdfShareV33" class="btn primary" type="button">PDF teilen / drucken</button>
+        <a id="pdfOpenV34" class="btn primary" href="#" target="_blank" rel="noopener">PDF anzeigen</a>
+        <button id="pdfShareV33" class="btn" type="button">PDF teilen / drucken</button>
         <button id="pdfDownloadV33" class="btn" type="button">PDF herunterladen</button>
       </div>
       <div id="paperPrintHelp" class="paper-print-help small muted">
-        Auf iPhone/iPad öffnet „Druckansicht öffnen“ eine eigene, druckfreundliche Seite. Falls der Druckdialog dort nicht automatisch erscheint: in Safari <b>Teilen → Drucken</b>.
+        Version 3.4 erzeugt die PDF direkt als Vektor-Datei – ohne HTML-Screenshot, ohne große Canvas-Fläche und ohne externe PDF-Bibliothek. Nach „PDF erstellen“ kannst du sie zuerst <b>anzeigen</b> und dann über den nativen Teilen-Dialog <b>drucken oder in Dateien sichern</b>.
       </div>
     </div>
 
@@ -3342,7 +3466,7 @@ renderOverview();renderLearn();renderStats();loadAnswerKey();loadTranslations();
 .paper-history-ids-v32{margin-top:8px;font-size:11px;color:var(--muted);line-height:1.4}
 
 
-/* ===== Version 3.3.2 Preview ===== */
+/* ===== Version 3.4 Preview ===== */
 .preview-badge-v33{
   position:fixed;z-index:24;left:max(10px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));
   padding:4px 8px;border-radius:999px;background:#6b4fd3;color:#fff;
@@ -3413,7 +3537,7 @@ body.bamf-font-v33 #examAnswers{
 }
 
 
-/* ===== Version 3.3.2 Preview ===== */
+/* ===== Version 3.4 Preview ===== */
 .hero>div:first-child>.muted{display:none!important}
 #learn .progressline,#learnProgress{display:none!important}
 
@@ -3763,7 +3887,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Preview is intentionally isolated from the stable github.io page.
   const previewBadge=document.getElementById("previewBadgeV33");
-  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.3.2";}
+  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.4.1";}
 
   // Fully local Turkish dataset. Do not mutate QUESTIONS or German answers.
   const previousTrForV33=trFor;
@@ -3923,7 +4047,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Version display.
   const versionSmall=document.querySelector("#versionToggle small");
-  if(versionSmall)versionSmall.textContent="Version 3.3.2 · Preview";
+  if(versionSmall)versionSmall.textContent="Version 3.4.1 · Preview";
 })();
 </script>
 
@@ -3931,8 +4055,672 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
 
 <script>
-window.__EBT_BUILD__="3.3.2-preview";
-document.documentElement.dataset.ebtBuild="3.3.2-preview";
+window.__EBT_BUILD__="3.4.1-preview";
+document.documentElement.dataset.ebtBuild="3.4.1-preview";
 </script>
+
+<script>
+/* ===== EBT PDF Engine 3.4.1 - lokal, vektorbasiert ===== */
+(function(root,factory){
+  const api=factory();
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  root.EBTPdfEngine=api;
+})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  const A4={w:595.28,h:841.89};
+  const te=new TextEncoder();
+  const ascii=s=>te.encode(s);
+  const concat=(parts)=>{let n=0;for(const p of parts)n+=p.length;const out=new Uint8Array(n);let o=0;for(const p of parts){out.set(p,o);o+=p.length}return out};
+
+  const cp1252Extra={
+    '€':0x80,'‚':0x82,'ƒ':0x83,'„':0x84,'…':0x85,'†':0x86,'‡':0x87,'ˆ':0x88,'‰':0x89,'Š':0x8a,'‹':0x8b,'Œ':0x8c,'Ž':0x8e,
+    '‘':0x91,'’':0x92,'“':0x93,'”':0x94,'•':0x95,'–':0x96,'—':0x97,'˜':0x98,'™':0x99,'š':0x9a,'›':0x9b,'œ':0x9c,'ž':0x9e,'Ÿ':0x9f
+  };
+  function cp1252Bytes(str){
+    const a=[];
+    for(const ch of String(str)){
+      const c=ch.codePointAt(0);
+      if(c<=0x7f||(c>=0xa0&&c<=0xff))a.push(c);
+      else if(cp1252Extra[ch]!=null)a.push(cp1252Extra[ch]);
+      else a.push(0x3f);
+    }
+    return new Uint8Array(a);
+  }
+  function hexText(str){
+    const b=cp1252Bytes(str);let h='';
+    for(const x of b)h+=x.toString(16).padStart(2,'0').toUpperCase();
+    return '<'+h+'>';
+  }
+  function escName(s){return String(s).replace(/[^A-Za-z0-9_-]/g,'_')}
+
+  function approxWidth(text,size,bold=false){
+    let u=0;
+    for(const ch of String(text)){
+      if(ch===' ')u+=0.278;
+      else if('ilI.,:;!|\'`'.includes(ch))u+=0.25;
+      else if('mwMW@%'.includes(ch))u+=0.82;
+      else if(/[A-ZÄÖÜ]/.test(ch))u+=0.64;
+      else if(/[0-9]/.test(ch))u+=0.56;
+      else if(/[()\[\]{}\/-]/.test(ch))u+=0.35;
+      else u+=0.51;
+    }
+    return u*size*(bold?1.035:1);
+  }
+  function wrapText(text,maxWidth,size,bold=false){
+    const paras=String(text).split(/\n/);const lines=[];
+    for(const para of paras){
+      const words=para.trim().split(/\s+/).filter(Boolean);
+      if(!words.length){lines.push('');continue}
+      let line='';
+      for(const word of words){
+        const test=line?line+' '+word:word;
+        if(line&&approxWidth(test,size,bold)>maxWidth){lines.push(line);line=word}
+        else line=test;
+      }
+      if(line)lines.push(line);
+    }
+    return lines;
+  }
+
+  function dataUrlBytes(url){
+    const m=/^data:([^;,]+);base64,(.*)$/s.exec(url||'');
+    if(!m)throw new Error('Nur eingebettete Base64-Bilder werden unterstützt.');
+    const b64=m[2];
+    if(typeof Buffer!=='undefined')return {mime:m[1],bytes:new Uint8Array(Buffer.from(b64,'base64'))};
+    const bin=atob(b64);const bytes=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);return {mime:m[1],bytes};
+  }
+  function jpegInfo(bytes){
+    if(bytes[0]!==0xff||bytes[1]!==0xd8)throw new Error('JPEG erwartet');
+    let p=2;
+    while(p+9<bytes.length){
+      if(bytes[p]!==0xff){p++;continue}
+      let marker=bytes[p+1];p+=2;
+      while(marker===0xff){marker=bytes[p++];}
+      if(marker===0xd8||marker===0xd9)continue;
+      if(p+2>bytes.length)break;
+      const len=(bytes[p]<<8)|bytes[p+1];
+      if([0xc0,0xc1,0xc2,0xc3,0xc5,0xc6,0xc7,0xc9,0xca,0xcb,0xcd,0xce,0xcf].includes(marker)){
+        const h=(bytes[p+3]<<8)|bytes[p+4],w=(bytes[p+5]<<8)|bytes[p+6],components=bytes[p+7];
+        return {w,h,components};
+      }
+      if(len<2)break;p+=len;
+    }
+    throw new Error('JPEG-Dimensionen nicht gefunden');
+  }
+
+  class PDFBuilder{
+    constructor(){this.objects=[null];this.pages=[];this.fonts={};}
+    addObj(body){this.objects.push(typeof body==='string'?ascii(body):body);return this.objects.length-1}
+    addStream(dict,bytes){
+      const head=ascii('<< '+dict+' /Length '+bytes.length+' >>\nstream\n');
+      const tail=ascii('\nendstream');
+      return this.addObj(concat([head,bytes,tail]));
+    }
+    initFonts(){
+      this.fonts.F1=this.addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+      this.fonts.F2=this.addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+      this.fonts.F3=this.addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>');
+      this.fonts.F4=this.addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding >>');
+      this.fonts.F5=this.addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>');
+    }
+    addJpeg(dataUrl){
+      const {mime,bytes}=dataUrlBytes(dataUrl);if(!/jpeg|jpg/i.test(mime))throw new Error('JPEG erwartet');
+      const inf=jpegInfo(bytes);const cs=inf.components===1?'/DeviceGray':'/DeviceRGB';
+      const obj=this.addStream(`/Type /XObject /Subtype /Image /Width ${inf.w} /Height ${inf.h} /ColorSpace ${cs} /BitsPerComponent 8 /Filter /DCTDecode`,bytes);
+      return {obj,...inf,bytes};
+    }
+    addPage(ops,imageRefs=[]){this.pages.push({ops,imageRefs});}
+    finish(meta={}){
+      this.initFonts();
+      // Fonts need to exist before page objects are created, but pages were collected as ops first.
+      const pageObjs=[];
+      const pagesObjPlaceholder=this.addObj('');
+      for(const pg of this.pages){
+        const content=this.addStream('',ascii(pg.ops.join('\n')));
+        let xobj='';
+        if(pg.imageRefs.length){
+          xobj='/XObject << '+pg.imageRefs.map(x=>`/${x.name} ${x.obj} 0 R`).join(' ')+' >> ';
+        }
+        const fonts=`/Font << /F1 ${this.fonts.F1} 0 R /F2 ${this.fonts.F2} 0 R /F3 ${this.fonts.F3} 0 R /F4 ${this.fonts.F4} 0 R /F5 ${this.fonts.F5} 0 R >>`;
+        const body=`<< /Type /Page /Parent ${pagesObjPlaceholder} 0 R /MediaBox [0 0 ${A4.w} ${A4.h}] /Resources << ${fonts} ${xobj} >> /Contents ${content} 0 R >>`;
+        pageObjs.push(this.addObj(body));
+      }
+      this.objects[pagesObjPlaceholder]=ascii(`<< /Type /Pages /Count ${pageObjs.length} /Kids [${pageObjs.map(n=>n+' 0 R').join(' ')}] >>`);
+      const catalog=this.addObj(`<< /Type /Catalog /Pages ${pagesObjPlaceholder} 0 R >>`);
+      const info=this.addObj(`<< /Title ${hexText(meta.title||'Einbuergerungstest BW - Uebungstest')} /Creator ${hexText('Einbuergerungstest BW Web-App')} /Producer ${hexText('EBT PDF Engine 3.4.1')} >>`);
+
+      const parts=[ascii('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n')];
+      const offsets=[0];let pos=parts[0].length;
+      for(let i=1;i<this.objects.length;i++){
+        offsets[i]=pos;
+        const h=ascii(`${i} 0 obj\n`),b=this.objects[i]||ascii(''),t=ascii('\nendobj\n');
+        parts.push(h,b,t);pos+=h.length+b.length+t.length;
+      }
+      const xrefPos=pos;
+      let xref=`xref\n0 ${this.objects.length}\n0000000000 65535 f \n`;
+      for(let i=1;i<this.objects.length;i++)xref+=String(offsets[i]).padStart(10,'0')+' 00000 n \n';
+      xref+=`trailer\n<< /Size ${this.objects.length} /Root ${catalog} 0 R /Info ${info} 0 R >>\nstartxref\n${xrefPos}\n%%EOF\n`;
+      parts.push(ascii(xref));
+      return concat(parts);
+    }
+  }
+
+  function textOp(x,y,text,size=10,font='F1'){return `BT /${font} ${size.toFixed(2)} Tf 1 0 0 1 ${x.toFixed(2)} ${y.toFixed(2)} Tm ${hexText(text)} Tj ET`}
+  function lineOp(x1,y1,x2,y2,w=.7){return `${w} w ${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S`}
+  function rectOp(x,y,w,h,fillGray=null,stroke=true){let s='';if(fillGray!=null)s+=`${fillGray} g ${x} ${y} ${w} ${h} re f 0 g `;if(stroke)s+=`${x} ${y} ${w} ${h} re S`;return s}
+  function drawWrapped(ops,x,y,text,maxWidth,size=10,font='F1',leading=size*1.25,maxLines=99){
+    const lines=wrapText(text,maxWidth,size,/F2|F4/.test(font)).slice(0,maxLines);
+    for(const l of lines){ops.push(textOp(x,y,l,size,font));y-=leading}
+    return {y,lines};
+  }
+  function drawHeader(ops,pageNo,state){
+    ops.push(textOp(42,812,'Einbürgerungstest',9,'F5'));
+    ops.push(textOp(205,812,`Prüfungsnr.: ${state.examNo} / Testfragebogennr.: ${state.formNo}`,8,'F1'));
+    ops.push(textOp(515,812,`Seite ${pageNo}`,8,'F1'));
+    ops.push(lineOp(42,806,553,806,.6));
+  }
+  function drawGrayTitle(ops,text){ops.push(rectOp(42,735,511,34,.87,false));ops.push(textOp(250-approxWidth(text,18,true)/2,746,text,18,'F2'))}
+
+  function imageDrawOps(builder,pgImages,url,name,x,y,maxW,maxH){
+    const img=builder.addJpeg(url);const scale=Math.min(maxW/img.w,maxH/img.h);const w=img.w*scale,h=img.h*scale;
+    pgImages.push({name,obj:img.obj});
+    return {op:`q ${w.toFixed(2)} 0 0 ${h.toFixed(2)} ${x.toFixed(2)} ${y.toFixed(2)} cm /${name} Do Q`,w,h};
+  }
+
+  function questionHeight(q,imageMap,scale=1){
+    const qSize=10.2*scale, optSize=9.2*scale;
+    const qLines=wrapText(q.question,485,qSize,true).length;
+    let h=(18+qLines*13)*scale+10;
+    const m=imageMap[String(q.globalId)];
+    if(m?.kind==='single')h+=86*scale;
+    if(m?.kind==='options')h+=148*scale;
+    else{
+      for(const opt of q.options||[]){
+        const ol=wrapText(opt,457,optSize,false).length;
+        h+=Math.max(18*scale,ol*11*scale+5*scale);
+      }
+    }
+    return Math.max(76*scale,h+8*scale);
+  }
+
+  function scaleForChunk(chunk,imageMap,available=700){
+    // Start at print-like sizing. Reduce only when the selected random
+    // combination would not fit on its fixed question page.
+    for(const scale of [1,.96,.92,.88,.84,.80,.76,.72]){
+      const need=chunk.reduce((sum,q)=>sum+questionHeight(q,imageMap,scale),0);
+      if(need<=available)return scale;
+    }
+    return .68;
+  }
+
+  function drawQuestion(builder,ops,images,q,n,y,imageMap,scale=1,questionImages={}){
+    const left=52,maxW=485;
+    const nSize=9.5*scale,qSize=10.2*scale,optSize=9.2*scale;
+    const qLead=13*scale,optLead=11*scale;
+    ops.push(textOp(left,y,`Frage ${n}`,nSize,'F2'));y-=16*scale;
+
+    const qRaster=questionImages[String(q.globalId)]||null;
+    if(qRaster?.url){
+      const desiredW=Math.min(maxW*scale,(qRaster.ptWidth||maxW)*scale);
+      const desiredH=(qRaster.ptHeight||18)*scale;
+      const draw=imageDrawOps(
+        builder,images,qRaster.url,`QText${n}`,
+        left,y-desiredH+3*scale,desiredW,desiredH
+      );
+      ops.push(draw.op);
+      y-=desiredH+4*scale;
+    }else{
+      // Safe fallback if a browser cannot create the small Arial strip.
+      // Base question is italic regular; not fully bold.
+      const qlines=wrapText(q.question,maxW,qSize,false);
+      for(const ln of qlines){ops.push(textOp(left,y,ln,qSize,'F3'));y-=qLead}
+      y-=3*scale;
+    }
+    const m=imageMap[String(q.globalId)];
+    if(m?.kind==='single'&&m.urls?.[0]){
+      const imgH=78*scale;
+      const draw=imageDrawOps(builder,images,m.urls[0],`Im${n}_1`,left,y-(imgH+4),250*scale,imgH);
+      ops.push(draw.op);y-=86*scale;
+    }
+    if(m?.kind==='options'&&m.urls?.length===4){
+      const cellW=222*scale,imgH=52*scale,startY=y;
+      for(let i=0;i<4;i++){
+        const col=i%2,row=Math.floor(i/2),cx=left+col*245,cy=startY-row*74*scale;
+        ops.push(rectOp(cx,cy-9*scale,9*scale,9*scale,null,true));
+        ops.push(textOp(cx+14*scale,cy-8*scale,String.fromCharCode(65+i),8.5*scale,'F2'));
+        const draw=imageDrawOps(builder,images,m.urls[i],`Im${n}_${i+1}`,cx+34*scale,cy-imgH,(cellW-40*scale),imgH-4*scale);
+        ops.push(draw.op);
+      }
+      y-=150*scale;
+    }else{
+      for(let i=0;i<4;i++){
+        const txt=q.options[i]||'';
+        const olines=wrapText(txt,maxW-28,optSize,false);
+        ops.push(rectOp(left+2,y-8*scale,8*scale,8*scale,null,true));
+        let yy=y-7*scale;
+        for(const ln of olines){ops.push(textOp(left+18*scale,yy,ln,optSize,'F1'));yy-=optLead}
+        y-=Math.max(18*scale,olines.length*optLead+5*scale);
+      }
+    }
+    return y-8*scale;
+  }
+
+  function generate(opts){
+    const questions=opts.questions||[],imageMap=opts.imageMap||{},questionImages=opts.questionImages||{};
+    if(questions.length!==33)throw new Error('PDF benötigt genau 33 Fragen.');
+    const general=questions.filter(q=>q.type!=='bw').length,bw=questions.filter(q=>q.type==='bw').length;
+    if(general!==30||bw!==3)throw new Error(`Erwartet 30 allgemeine + 3 BW-Fragen, erhalten ${general}+${bw}.`);
+    const state=opts.state||{examNo:'100001',formNo:'BW_TEST_000001'};
+    const questionsOnly=!!opts.questionsOnly;
+    const qrImage=opts.qrImage||null;
+    const b=new PDFBuilder();
+
+    if(!questionsOnly){
+    // Page 1 - cover
+    {
+      const o=[];
+      o.push(textOp(44,788,'Einbürgerungstest BW',17,'F2'));
+      o.push(textOp(44,766,'ÜBUNGSTEST - kein amtlicher BAMF-Prüfungsbogen',9,'F2'));
+      o.push(textOp(395,788,`Prüfungsnr.: ${state.examNo}`,9,'F1'));
+      o.push(textOp(395,772,`Testfragebogennr.: ${state.formNo}`,8,'F1'));
+      o.push(textOp(395,756,'Bundesland: Baden-Württemberg',8,'F1'));
+      o.push(rectOp(42,700,511,34,.87,false));o.push(textOp(225,710,'Testfragebogen',20,'F2'));
+      const rows=[['Prüfungsteilnehmer',''],['Vorname',''],['Familienname',''],['geboren am',''],['Geburtsort',''],['Geburtsland','']];
+      let y=650;for(const [lab] of rows){o.push(textOp(50,y+6,lab,9,'F2'));o.push(rectOp(42,y,511,28,null,true));o.push(lineOp(185,y,185,y+28,.5));y-=28}
+      o.push(textOp(44,410,'aktuelle Anschrift',10,'F2'));o.push(rectOp(42,300,511,95,null,true));
+      for(let yy=324;yy<395;yy+=24)o.push(lineOp(42,yy,553,yy,.4));
+      o.push(textOp(44,90,'Prüfungstermin: ____________________________',10,'F1'));
+      o.push(textOp(395,90,'Datum: __________________',10,'F1'));
+      const imgs=[];
+      if(qrImage){
+        try{
+          const d=imageDrawOps(b,imgs,qrImage,'QrCover',435,122,92,92);o.push(d.op);
+          o.push(textOp(435,111,'Digital fortsetzen',7.5,'F2'));
+        }catch(e){}
+      }
+      b.addPage(o,imgs);
+    }
+
+    // Page 2 - instructions
+    {
+      const o=[];drawHeader(o,2,state);drawGrayTitle(o,'Anleitung');
+      let y=700;
+      const paras=[
+        'In diesem Testfragebogen werden Sie 33 Fragen beantworten. Zu jeder Frage werden Ihnen vier verschiedene Antwortmöglichkeiten angeboten. Dabei ist immer nur eine der Antwortmöglichkeiten richtig. Setzen Sie bitte ein Kreuz in das Kästchen vor der richtigen Antwort.',
+        'Dafür haben Sie 60 Minuten Zeit.',
+        'Lesen Sie die Fragen sorgfältig durch. Gewertet wird jeweils nur eine Antwort pro Frage.'
+      ];
+      for(const p of paras){const r=drawWrapped(o,52,y,p,485,11,'F1',15);y=r.y-14}
+      o.push(textOp(52,470,'Beispiel 1 - so kreuzt man an',12,'F2'));o.push(rectOp(52,320,430,125,null,true));
+      o.push(textOp(68,418,'Wie viele Tage hat die Woche?',10,'F3'));
+      ['2','5','7','10'].forEach((v,i)=>{const yy=392-i*22;o.push(rectOp(72,yy-7,9,9,null,true));if(v==='7'){o.push(lineOp(73,yy-6,80,yy+1,1.1));o.push(lineOp(80,yy-6,73,yy+1,1.1))}o.push(textOp(90,yy-6,v,10,'F1'))});
+      b.addPage(o,[]);
+    }
+
+    // Page 3 - correction examples
+    {
+      const o=[];drawHeader(o,3,state);
+      o.push(textOp(52,760,'Beispiel 2 - so korrigiert man',12,'F2'));
+      drawWrapped(o,52,738,'Wenn Sie eine bereits markierte Antwort ändern möchten, füllen Sie das alte Kästchen deutlich aus und setzen Sie ein neues Kreuz bei der richtigen Antwort.',485,10.5,'F1',14);
+      o.push(rectOp(52,500,430,160,null,true));o.push(textOp(68,630,'Wie viele Tage hat die Woche?',10,'F3'));
+      ['2','5','7','10'].forEach((v,i)=>{const yy=605-i*24;o.push(rectOp(72,yy-7,10,10,i===2?0:null,true));if(i===0){o.push(lineOp(73,yy-6,81,yy+2,1.1));o.push(lineOp(81,yy-6,73,yy+2,1.1))}o.push(textOp(92,yy-6,v,10,'F1'))});
+      o.push(textOp(52,430,'Beispiel 3 - so korrigiert man erneut',12,'F2'));
+      drawWrapped(o,52,408,'Soll eine zuvor verworfene Antwort wieder gelten, markieren Sie die Korrektur entsprechend eindeutig.',485,10.5,'F1',14);
+      o.push(rectOp(52,190,430,160,null,true));
+      b.addPage(o,[]);
+    }
+
+    }
+
+    // 10 question pages. Keep the same 3/4 distribution as the current web app.
+    const counts=[3,4,3,4,3,3,4,4,4,1];let off=0;
+    counts.forEach((count,idx)=>{
+      const o=[],imgs=[];drawHeader(o,(questionsOnly?1:4)+idx,state);let y=idx===0?760:776;
+      if(idx===0){
+        o.push(textOp(52,y,'Testfragen',15,'F2'));
+        if(questionsOnly&&qrImage){
+          try{const d=imageDrawOps(b,imgs,qrImage,'QrFirst',472,724,62,62);o.push(d.op)}catch(e){}
+        }
+        y-=28;
+      }
+      const chunk=questions.slice(off,off+count);
+      const available=y-48;
+      const scale=scaleForChunk(chunk,imageMap,available);
+      for(let i=0;i<chunk.length;i++){
+        y=drawQuestion(b,o,imgs,chunk[i],off+i+1,y,imageMap,scale,questionImages);
+      }
+      b.addPage(o,imgs);off+=count;
+    });
+
+    if(!questionsOnly){
+    // Page 14 - signature
+    {
+      const o=[];drawHeader(o,14,state);drawGrayTitle(o,'Letzte Seite');
+      drawWrapped(o,52,690,'Bevor Sie den Übungstest beenden, prüfen Sie bitte, ob Sie alle 33 Fragen bearbeitet haben.',485,12,'F1',16);
+      o.push(lineOp(52,510,320,510,.7));o.push(textOp(52,495,'Datum / Unterschrift',9,'F1'));
+      o.push(lineOp(42,420,553,420,.6));o.push(textOp(180,390,'- Nur für die Auswertung des Übungstests -',11,'F2'));
+      o.push(textOp(52,355,'Testfragebogen wurde vollständig erfasst.',10,'F1'));
+      o.push(lineOp(52,260,320,260,.7));o.push(textOp(52,245,'Datum / Unterschrift',9,'F1'));
+      o.push(textOp(42,38,'ÜBUNGSTEST - kein amtlicher BAMF-Prüfungsbogen',8,'F2'));
+      b.addPage(o,[]);
+    }
+    }
+
+    const bytes=b.finish({title:`Einbürgerungstest BW Übungstest ${state.formNo}`});
+    return {bytes,fileName:`Einbuergerungstest-BW-${escName(state.formNo)}.pdf`,pageCount:questionsOnly?10:14};
+  }
+
+
+  function generateSystemTest(opts={}){
+    const b=new PDFBuilder();
+    const o=[],imgs=[];
+    o.push(textOp(52,780,'PDF-Systemtest - Einbürgerungstest BW',18,'F2'));
+    o.push(textOp(52,752,'Diese Seite wurde lokal im Browser ohne HTML-Canvas erzeugt.',10,'F1'));
+    o.push(textOp(52,718,'Muster-Test-Schrift:',10,'F2'));
+    o.push(textOp(52,692,'In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ...',11,'F4'));
+    o.push(textOp(52,657,'Was passierte am',11,'F3'));
+    o.push(textOp(145,657,'9. November 1938 in Deutschland?',11,'F4'));
+    ['Antwort A','Antwort B','Antwort C','Antwort D'].forEach((t,i)=>{const y=615-i*28;o.push(rectOp(54,y-7,10,10,null,true));o.push(textOp(76,y-6,t,10,'F1'))});
+    const sample=opts.sampleImage;
+    if(sample){try{const d=imageDrawOps(b,imgs,sample,'ImTest',330,510,190,125);o.push(d.op);o.push(textOp(330,495,'Eingebettetes JPEG aus dem Fragenkatalog',8,'F1'))}catch(e){o.push(textOp(330,560,'Bildtest konnte nicht eingebettet werden.',9,'F1'))}}
+    o.push(lineOp(52,450,543,450,.6));
+    o.push(textOp(52,425,'Wenn diese Seite als PDF sichtbar ist, funktionieren PDF-Struktur, Schrift und Bild-Einbettung.',9.5,'F1'));
+    b.addPage(o,imgs);
+    const bytes=b.finish({title:'Einbürgerungstest BW PDF-Systemtest'});
+    return {bytes,fileName:'Einbuergerungstest-BW-PDF-Systemtest.pdf',pageCount:1};
+  }
+
+  return {generate,generateSystemTest,wrapText,approxWidth,jpegInfo};
+});
+
+</script>
+
+<script>
+/* ===== Version 3.4 Preview - finaler Controller ===== */
+(function(){
+  const BUILD='3.4.1-preview';
+  const FONT_KEY='ebt_bw_test_font_v33';
+  const PAPER_KEY='ebt_bw_paper_exam_v1';
+  const PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
+  let pdfBlobV34=null,pdfUrlV34=null,pdfFileNameV34='Einbuergerungstest-BW-Uebungstest.pdf';
+
+  window.__EBT_BUILD__=BUILD;
+  document.documentElement.dataset.ebtBuild=BUILD;
+  const badge=document.getElementById('previewBadgeV33');
+  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.4.1'}
+  const versionSmall=document.querySelector('#versionToggle small');
+  if(versionSmall)versionSmall.textContent='Version 3.4.1 · Preview';
+
+  /* --- Prüfungsdarstellung: alter Handler wird entfernt, Einstellung bleibt erhalten. --- */
+  const oldFont=document.getElementById('menuTestFontV33');
+  let fontSwitch=oldFont;
+  if(oldFont){fontSwitch=oldFont.cloneNode(true);oldFont.replaceWith(fontSwitch)}
+
+  function bamfOnV34(){return !!readJSON(FONT_KEY,false)}
+  function highlightQuestionV34(node){
+    if(!node)return;
+    const txt=node.textContent||'';
+    if(!bamfOnV34()){
+      node.textContent=txt;
+      return;
+    }
+    // Nur eindeutig erkennbare Prüfungsbegriffe hervorheben. Der Wortlaut bleibt unverändert.
+    const escaped=esc(txt);
+    const strong=escaped
+      .replace(/\b(\d{1,2}\.\s+[A-ZÄÖÜ][A-Za-zÄÖÜäöüß]+\s+\d{4}(?:\s+in\s+Deutschland)?)\b/g,'<strong>$1</strong>')
+      .replace(/\b(DDR|BRD|EU|NATO|CDU|CSU|SPD|FDP|AfD|Deutschland|Bundestag|Bundesrat|Grundgesetz)\b/g,'<strong>$1</strong>');
+    node.innerHTML=strong;
+  }
+  function applyFontV34(){
+    const on=bamfOnV34();
+    document.body.classList.toggle('bamf-font-v34',on);
+    document.body.classList.toggle('bamf-font-v33',on);
+    if(fontSwitch)fontSwitch.checked=on;
+    highlightQuestionV34(document.getElementById('learnQuestion'));
+    highlightQuestionV34(document.getElementById('examQuestion'));
+  }
+  fontSwitch?.addEventListener('change',()=>{
+    writeJSON(FONT_KEY,!!fontSwitch.checked);
+    applyFontV34();
+  });
+
+  // Nach JEDEM Render erneut anwenden, weil renderLearn/renderExam den Fragetext neu schreiben.
+  const renderLearnBeforeV34=renderLearn;
+  renderLearn=function(){renderLearnBeforeV34();applyFontV34()};
+  const renderExamBeforeV34=renderExam;
+  renderExam=function(){renderExamBeforeV34();applyFontV34()};
+  applyFontV34();
+  try{renderLearn()}catch(e){console.error('V3.4 Lern-Render',e)}
+
+  /* --- PDF: keine Canvas-Seiten, keine html2pdf-Abhängigkeit. --- */
+  const status=document.getElementById('pdfStatusV33');
+  const actions=document.getElementById('pdfActionsV33');
+  const openLink=document.getElementById('pdfOpenV34');
+
+  function clearPdfV34(){
+    pdfBlobV34=null;
+    if(pdfUrlV34){URL.revokeObjectURL(pdfUrlV34);pdfUrlV34=null}
+    if(actions)actions.hidden=true;
+    if(openLink)openLink.href='#';
+  }
+  function setPdfResultV34(result,label='PDF'){
+    clearPdfV34();
+    pdfBlobV34=new Blob([result.bytes],{type:'application/pdf'});
+    pdfFileNameV34=result.fileName||'Einbuergerungstest-BW.pdf';
+    pdfUrlV34=URL.createObjectURL(pdfBlobV34);
+    if(openLink){openLink.href=pdfUrlV34;openLink.target='_blank'}
+    if(actions)actions.hidden=false;
+    if(status){
+      status.className='pdf-status-v33 small pdf-engine-ok-v34';
+      status.textContent=`✓ ${label} fertig · ${result.pageCount} Seite${result.pageCount===1?'':'n'} · ${(pdfBlobV34.size/1024).toFixed(0)} KB`;
+    }
+  }
+  function pdfErrorV34(err){
+    console.error('EBT PDF Engine 3.4.1',err);
+    if(status){status.className='pdf-status-v33 small pdf-engine-error-v34';status.textContent='PDF-Fehler: '+(err?.message||String(err))}
+    if(actions)actions.hidden=true;
+  }
+
+  function currentPaperV34(forceNew=false){
+    const state=window.buildPaperPagesV31?.(forceNew) || readJSON(PAPER_KEY,null);
+    if(!state||!Array.isArray(state.ids)||state.ids.length!==33)throw new Error('Papier-Test konnte nicht vollständig erzeugt werden.');
+    const questions=state.ids.map(id=>qById(Number(id))).filter(Boolean);
+    if(questions.length!==33)throw new Error('Nicht alle 33 Fragen wurden gefunden.');
+    const general=questions.filter(q=>q.type==='general').length;
+    const bw=questions.filter(q=>q.type==='bw').length;
+    if(general!==30||bw!==3)throw new Error(`Ungültiger Fragensatz: ${general} allgemein + ${bw} BW.`);
+    return {state,questions};
+  }
+
+
+  /* --- Version 3.4.1: kleine Arial-Fragebilder für den PDF-Bogen --- */
+  const BAMF_EMPHASIS_V341=/(\b\d{1,2}\.\s+[A-ZÄÖÜ][A-Za-zÄÖÜäöüß]+\s+\d{4}(?:\s+in\s+Deutschland)?\b|\b(?:DDR|BRD|EU|NATO|CDU|CSU|SPD|FDP|AfD|Deutschland|Bundestag|Bundesrat|Grundgesetz)\b)/g;
+
+  function bamfRunsV341(text){
+    const s=String(text||'');
+    const out=[];
+    let last=0;
+    BAMF_EMPHASIS_V341.lastIndex=0;
+    let m;
+    while((m=BAMF_EMPHASIS_V341.exec(s))){
+      if(m.index>last)out.push({text:s.slice(last,m.index),bold:false});
+      out.push({text:m[0],bold:true});
+      last=m.index+m[0].length;
+    }
+    if(last<s.length)out.push({text:s.slice(last),bold:false});
+    return out.length?out:[{text:s,bold:false}];
+  }
+
+  function questionStripV341(question){
+    const cssWidth=646;          // ~485 PDF pt at 96 dpi
+    const fontPx=14;             // ~10.5 pt at 96 dpi
+    const linePx=19;
+    const padX=4,padY=4;
+    const regular=`italic ${fontPx}px Arial, Helvetica, sans-serif`;
+    const bold=`bold italic ${fontPx}px Arial, Helvetica, sans-serif`;
+
+    const probe=document.createElement('canvas');
+    probe.width=cssWidth;
+    probe.height=40;
+    const pctx=probe.getContext('2d',{alpha:false});
+    if(!pctx)throw new Error('Canvas für Prüfungsfrage nicht verfügbar.');
+
+    const tokens=[];
+    for(const run of bamfRunsV341(question)){
+      const pieces=run.text.split(/(\s+)/).filter(Boolean);
+      for(const piece of pieces)tokens.push({text:piece,bold:run.bold});
+    }
+
+    const lines=[[]];
+    let lineWidth=0;
+    for(const tok of tokens){
+      pctx.font=tok.bold?bold:regular;
+      const w=pctx.measureText(tok.text).width;
+      const isSpace=/^\s+$/.test(tok.text);
+      if(!isSpace && lineWidth+w>cssWidth-padX*2 && lines[lines.length-1].length){
+        lines.push([]);
+        lineWidth=0;
+      }
+      if(isSpace && lineWidth===0)continue;
+      lines[lines.length-1].push({...tok,w});
+      lineWidth+=w;
+    }
+
+    const height=Math.max(27,padY*2+lines.length*linePx);
+    const c=document.createElement('canvas');
+    c.width=cssWidth;
+    c.height=height;
+    const ctx=c.getContext('2d',{alpha:false});
+    if(!ctx)throw new Error('Canvas für Prüfungsfrage nicht verfügbar.');
+    ctx.fillStyle='#fff';
+    ctx.fillRect(0,0,c.width,c.height);
+    ctx.fillStyle='#111';
+    ctx.textBaseline='alphabetic';
+
+    let y=padY+fontPx;
+    for(const line of lines){
+      let x=padX;
+      for(const tok of line){
+        ctx.font=tok.bold?bold:regular;
+        ctx.fillText(tok.text,x,y);
+        x+=ctx.measureText(tok.text).width;
+      }
+      y+=linePx;
+    }
+
+    return {
+      url:c.toDataURL('image/jpeg',0.96),
+      ptWidth:cssWidth*72/96,
+      ptHeight:height*72/96
+    };
+  }
+
+  async function questionImageMapV341(questions){
+    // Arial is usually already available on iPhone/iPad; wait for the font
+    // resolver once so the first generated strip doesn't use a fallback.
+    try{
+      if(document.fonts?.load){
+        await Promise.all([
+          document.fonts.load('italic 14px Arial'),
+          document.fonts.load('bold italic 14px Arial')
+        ]);
+      }
+    }catch(e){}
+
+    const map={};
+    for(const q of questions){
+      try{map[String(q.globalId)]=questionStripV341(q.question)}
+      catch(err){console.warn('Prüfungsfrage bleibt als Vektor-Fallback',q.globalId,err)}
+    }
+    return map;
+  }
+
+  // QR ist optional. Falls qrcodejs bereits einen kleinen QR erzeugt hat, wird nur DIESER
+  // kleine Canvas in JPEG umgewandelt. Der PDF-Inhalt selbst wird niemals über Canvas gerendert.
+  function qrJpegV34(){
+    try{
+      const src=document.querySelector('#printPaperWrap .paper-qr-code-v32 img, #printPaperWrap .paper-qr-code-v32 canvas');
+      if(!src)return null;
+      const c=document.createElement('canvas');c.width=260;c.height=260;
+      const ctx=c.getContext('2d',{alpha:false});if(!ctx)return null;
+      ctx.fillStyle='#fff';ctx.fillRect(0,0,260,260);ctx.imageSmoothingEnabled=false;ctx.drawImage(src,8,8,244,244);
+      return c.toDataURL('image/jpeg',1);
+    }catch(e){console.warn('QR nicht in PDF eingebettet',e);return null}
+  }
+
+  async function createPaperPdfV34(){
+    try{
+      clearPdfV34();
+      if(status){status.className='pdf-status-v33 small muted';status.textContent='PDF wird aufgebaut · Prüfungsfragen in Arial-Stil …'}
+      const {state,questions}=currentPaperV34(false);
+      // QR-DOM bekommt zwei Frames Zeit; PDF-Erzeugung selbst bleibt rein vektorbasiert.
+      await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      const questionImages=await questionImageMapV341(questions);
+      const result=EBTPdfEngine.generate({
+        questions,imageMap:IMAGE_MAP,questionImages,state,
+        questionsOnly:!!readJSON(PAPER_ONLY_KEY,false),
+        qrImage:qrJpegV34()
+      });
+      setPdfResultV34(result,'Übungstest-PDF');
+    }catch(err){pdfErrorV34(err)}
+  }
+
+  function createSystemPdfV34(){
+    try{
+      clearPdfV34();
+      const sample=IMAGE_MAP?.['55']?.urls?.[0]||null;
+      const result=EBTPdfEngine.generateSystemTest({sampleImage:sample});
+      setPdfResultV34(result,'PDF-Systemtest');
+      document.getElementById('paperPreview').hidden=false;
+      document.getElementById('paperPreviewMeta').textContent='Systemtest: lokale PDF-Struktur, Schrift, Kästchen und Bild-Einbettung.';
+      document.getElementById('paperPreview')?.scrollIntoView({behavior:'smooth',block:'center'});
+    }catch(err){pdfErrorV34(err)}
+  }
+
+  // Alte V3.1/V3.2/V3.3 Druck-Listener vollständig entfernen.
+  const oldCreate=document.getElementById('paperPreviewPrint');
+  if(oldCreate){
+    const b=oldCreate.cloneNode(true);oldCreate.replaceWith(b);
+    b.textContent='PDF erstellen';b.addEventListener('click',createPaperPdfV34);
+  }
+  const oldSystem=document.getElementById('pdfSystemTestV34');
+  if(oldSystem){
+    const b=oldSystem.cloneNode(true);oldSystem.replaceWith(b);b.addEventListener('click',createSystemPdfV34);
+  }
+  const oldShare=document.getElementById('pdfShareV33');
+  if(oldShare){
+    const b=oldShare.cloneNode(true);oldShare.replaceWith(b);
+    b.addEventListener('click',async()=>{
+      if(!pdfBlobV34)return;
+      try{
+        const file=new File([pdfBlobV34],pdfFileNameV34,{type:'application/pdf',lastModified:Date.now()});
+        const canFileShare=!!navigator.share && (!navigator.canShare || navigator.canShare({files:[file]}));
+        if(canFileShare){
+          await navigator.share({files:[file]});
+          return;
+        }
+        throw new Error('Dateifreigabe wird in diesem Browser nicht angeboten. Nutze „PDF anzeigen“ oder „PDF herunterladen“.');
+      }catch(err){
+        if(err?.name==='AbortError')return;
+        alert(err?.message||'Teilen ist auf diesem Gerät nicht verfügbar.');
+      }
+    });
+  }
+  const oldDownload=document.getElementById('pdfDownloadV33');
+  if(oldDownload){
+    const b=oldDownload.cloneNode(true);oldDownload.replaceWith(b);
+    b.addEventListener('click',()=>{
+      if(!pdfBlobV34)return;
+      const a=document.createElement('a');a.href=pdfUrlV34;a.download=pdfFileNameV34;a.rel='noopener';
+      document.body.appendChild(a);a.click();a.remove();
+    });
+  }
+
+  // Bei neuem Papierbogen eine alte PDF nicht irrtümlich weiter anbieten.
+  for(const id of ['generatePaperExam','paperPreviewNew']){
+    const el=document.getElementById(id);el?.addEventListener('click',()=>setTimeout(clearPdfV34,0));
+  }
+})();
+</script>
+
 </body>
 </html>
