@@ -1,7 +1,7 @@
 {
-  "name": "Einbürgerungstest BW – Preview 3.6",
+  "name": "Einbürgerungstest BW – Preview 3.7",
   "short_name": "Einbürgerung BW",
-  "description": "Preview 3.6: BAMF-Originalfragen, responsive iPhone/iPad Hoch- und Querformat, direkte PDF-Vorschau mit Diagnose.",
+  "description": "Preview 3.7: BAMF-Originalfragen, responsive iPhone/iPad, direkte PDF-Vorschau und Papierprüfungen mit Antwortkontrolle und Statistik.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

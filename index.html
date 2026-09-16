@@ -871,8 +871,60 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
 @media(max-width:600px){.image-viewer.question-reader-v36 img{width:max(520px,138vw)!important}}
 </style>
 
+
+<style id="v37-paper-review-style">
+.paper-review-v37{margin-top:16px;border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
+.paper-review-v37[hidden]{display:none!important}
+.paper-review-head-v37{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:14px 14px 11px;border-bottom:1px solid var(--line)}
+.paper-review-info-v37{padding:12px 14px;background:color-mix(in srgb,var(--blue-soft) 55%,transparent);border-bottom:1px solid var(--line)}
+.paper-review-summary-v37{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:7px}
+.paper-review-chip-v37{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:var(--bg);border:1px solid var(--line)}
+.paper-review-chip-v37.good{background:var(--green-soft);color:var(--green)}
+.paper-review-chip-v37.bad{background:var(--red-soft);color:var(--red)}
+.paper-review-chip-v37.open{background:var(--bg);color:var(--muted)}
+.paper-review-list-v37{display:grid;gap:10px;padding:12px}
+.paper-review-item-v37{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}
+.paper-review-item-v37.review-good{border-left:5px solid var(--green)}
+.paper-review-item-v37.review-bad{border-left:5px solid var(--red)}
+.paper-review-item-v37.review-open{border-left:5px solid var(--line)}
+.paper-review-qhead-v37{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+.paper-review-qhead-v37 .num{font-weight:850}
+.paper-review-question-v37{margin:7px 0 10px;overflow:auto;-webkit-overflow-scrolling:touch}
+.paper-review-question-v37 img{display:block;width:auto;max-width:none;min-width:min(100%,420px);height:auto;background:#fff}
+.paper-review-question-v37 .bamf-html-question-v35{font-size:17px;font-weight:700;line-height:1.3}
+.paper-review-options-v37{display:grid;gap:6px;margin-top:8px}
+.paper-review-option-v37{display:grid;grid-template-columns:28px 1fr auto;align-items:start;gap:8px;padding:8px 9px;border:1px solid var(--line);border-radius:9px}
+.paper-review-option-v37.correct{border-color:var(--green);background:var(--green-soft)}
+.paper-review-letter-v37{font-weight:850}
+.paper-review-right-v37{font-size:11px;font-weight:800;color:var(--green);white-space:nowrap}
+.paper-review-controls-v37{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px}
+.paper-review-mark-v37{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:10px;padding:9px 6px;font:inherit;font-weight:750;cursor:pointer;touch-action:manipulation}
+.paper-review-mark-v37[data-status="correct"].selected{background:var(--green-soft);border-color:var(--green);color:var(--green)}
+.paper-review-mark-v37[data-status="wrong"].selected{background:var(--red-soft);border-color:var(--red);color:var(--red)}
+.paper-review-mark-v37[data-status="open"].selected{background:var(--bg);border-color:var(--muted);color:var(--muted)}
+.paper-review-mark-v37:disabled{opacity:.7;cursor:default}
+.paper-review-applied-v37{margin-top:7px;font-size:11px;color:var(--muted)}
+.paper-review-savebar-v37{position:sticky;bottom:0;z-index:4;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 14px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(10px)}
+.paper-main-v37{border-left-color:var(--blue)!important}
+.paper-main-v37 .history-status-v32{background:var(--blue-soft);color:var(--blue)}
+.paper-main-v37.complete-pass{border-left-color:var(--green)!important}
+.paper-main-v37.complete-pass .history-status-v32{background:var(--green-soft);color:var(--green)}
+.paper-main-v37.complete-fail{border-left-color:var(--red)!important}
+.paper-main-v37.complete-fail .history-status-v32{background:var(--red-soft);color:var(--red)}
+.paper-history-review-state-v37{margin-top:8px;font-size:12px;font-weight:700}
+@media(max-width:620px){
+  .paper-review-controls-v37{grid-template-columns:1fr}
+  .paper-review-savebar-v37{grid-template-columns:1fr}
+  .paper-review-option-v37{grid-template-columns:25px 1fr}.paper-review-right-v37{grid-column:2}
+}
+@media(min-width:820px){
+  .paper-review-list-v37{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  .paper-review-item-v37{height:100%;box-sizing:border-box}
+}
+</style>
+
 </head>
-<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.6</div>
+<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.7</div>
 <div class="top-actions" aria-label="Schnellaktionen">
   <button id="pauseExamTop" class="icon-btn" type="button" aria-label="Prüfung pausieren" hidden><span class="pause-glyph">Ⅱ</span></button>
   <button id="menuToggle" class="icon-btn menu-icon" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -915,7 +967,7 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
       <div class="menu-stack"><button id="exportProgress" class="btn" type="button">Fortschritt exportieren</button><label class="btn" for="importFile" style="cursor:pointer;text-align:center">Fortschritt importieren</label><input id="importFile" type="file" accept="application/json" hidden></div>
       <p id="backupSupportHint" class="small muted">Der Fortschritt wird nach jeder Änderung lokal gespeichert.</p>
     </section>
-    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.6 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
+    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.7 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
 <li>Menü oben rechts mit Hell / Dunkel / System</li><li>Mehrfachfilter mit Live-Zahlen und ausgegrauten 0-Treffern</li><li>Kompakter Lernmodus mit ★, 💡, 🇹🇷- und 🔀-Schaltern</li><li>Lernziel zeigt Resttage, empfohlenes Tagespensum und heutigen Fortschritt</li><li>Prüfungsauswertung und Prüfungsverlauf mit Frage-Details überarbeitet</li>
 <li>Pause nur während einer laufenden Prüfung; Fortsetzen über ▶ oder Pause-Fenster</li>
 <li>Fragen mit ★ markieren und gezielt lernen</li>
@@ -1200,13 +1252,14 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
         <a id="pdfOpenV34" class="btn primary" href="#" target="_blank" rel="noopener">PDF anzeigen</a>
         <button id="pdfShareV33" class="btn" type="button">PDF teilen / drucken</button>
         <button id="pdfDownloadV33" class="btn" type="button">PDF herunterladen</button>
+        <button id="paperReviewOpenV37" class="btn soft" type="button">✓ Antworten kontrollieren</button>
       </div>
       <div id="paperPrintHelp" class="paper-print-help small muted">
-        Version 3.6 erzeugt beim Tippen auf „Papier-Test erzeugen“ sofort einen neuen Satz aus <b>30 allgemeinen + 3 zufälligen BW-Fragen</b>, mischt alle 33 Positionen und baut anschließend direkt die lokale PDF. Ein PDF-Fenster wird bereits beim Tippen reserviert, damit iPhone/iPad es nicht als späteres Popup blockieren.
+        Version 3.7 erzeugt beim Tippen auf „Papier-Test erzeugen“ sofort einen neuen Satz aus <b>30 allgemeinen + 3 zufälligen BW-Fragen</b>, mischt alle 33 Positionen und baut anschließend direkt die lokale PDF. Ein PDF-Fenster wird bereits beim Tippen reserviert, damit iPhone/iPad es nicht als späteres Popup blockieren.
       </div>
       <div id="pdfDiagV36" class="pdf-diag-v36">
         <div class="pdf-diag-head-v36">
-          <div><b>PDF-Diagnose 3.6</b><div id="pdfDiagSummaryV36" class="small muted">Noch kein Test erzeugt.</div></div>
+          <div><b>PDF-Diagnose 3.7</b><div id="pdfDiagSummaryV36" class="small muted">Noch kein Test erzeugt.</div></div>
           <button id="pdfDiagCopyV36" class="btn compact" type="button">Diagnose kopieren</button>
         </div>
         <div id="pdfDiagLogV36" class="pdf-diag-log-v36"></div>
@@ -1214,6 +1267,24 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
       <div id="pdfInlineWrapV36" class="pdf-inline-v36" hidden>
         <div class="pdf-inline-head-v36"><b>PDF-Vorschau im Browser</b><span class="small muted">Falls iOS die Vorschau hier nicht rendert, funktioniert weiterhin „PDF anzeigen“ bzw. Teilen/Drucken.</span></div>
         <iframe id="pdfInlineFrameV36" title="PDF-Vorschau"></iframe>
+      </div>
+      <div id="paperReviewV37" class="paper-review-v37" hidden>
+        <div class="paper-review-head-v37">
+          <div>
+            <b>Drucktest kontrollieren</b>
+            <div id="paperReviewMetaV37" class="small muted">Vergleiche deinen ausgefüllten Bogen mit den richtigen Antworten.</div>
+          </div>
+          <button id="paperReviewCloseV37" class="btn compact" type="button">Schließen</button>
+        </div>
+        <div class="paper-review-info-v37">
+          <div id="paperReviewSummaryV37" class="paper-review-summary-v37"></div>
+          <div class="small muted">Markiere nur Fragen, bei denen du sicher weißt, ob du sie richtig oder falsch hattest. <b>Nicht bewertete Fragen werden nicht in die Statistik übernommen.</b></div>
+        </div>
+        <div id="paperReviewListV37" class="paper-review-list-v37"></div>
+        <div class="paper-review-savebar-v37">
+          <div id="paperReviewSaveHintV37" class="small muted">Deine Kontrolle wird im Druckverlauf gespeichert. Erst mit dem Button rechts werden neue Bewertungen in den Lernstand übernommen.</div>
+          <button id="paperReviewApplyStatsV37" class="btn primary" type="button" disabled>Bewertungen in Statistik übernehmen</button>
+        </div>
       </div>
     </div>
 
@@ -3981,7 +4052,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Preview is intentionally isolated from the stable github.io page.
   const previewBadge=document.getElementById("previewBadgeV33");
-  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.6";}
+  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.7";}
 
   // Fully local Turkish dataset. Do not mutate QUESTIONS or German answers.
   const previousTrForV33=trFor;
@@ -4141,7 +4212,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Version display.
   const versionSmall=document.querySelector("#versionToggle small");
-  if(versionSmall)versionSmall.textContent="Version 3.6 · Preview";
+  if(versionSmall)versionSmall.textContent="Version 3.7 · Preview";
 })();
 </script>
 
@@ -4573,7 +4644,7 @@ document.documentElement.dataset.ebtBuild="3.6-preview";
 <script>
 /* ===== Version 3.4 Preview - finaler Controller ===== */
 (function(){
-  const BUILD='3.6-preview';
+  const BUILD='3.7-preview';
   const FONT_KEY='ebt_bw_test_font_v33';
   const PAPER_KEY='ebt_bw_paper_exam_v1';
   const PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
@@ -4582,9 +4653,9 @@ document.documentElement.dataset.ebtBuild="3.6-preview";
   window.__EBT_BUILD__=BUILD;
   document.documentElement.dataset.ebtBuild=BUILD;
   const badge=document.getElementById('previewBadgeV33');
-  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.6'}
+  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
   const versionSmall=document.querySelector('#versionToggle small');
-  if(versionSmall)versionSmall.textContent='Version 3.6 · Preview';
+  if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
 
   /* --- Prüfungsdarstellung: alter Handler wird entfernt, Einstellung bleibt erhalten. --- */
   const oldFont=document.getElementById('menuTestFontV33');
@@ -4917,7 +4988,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
 /* ===== Version 3.5: Original-BAMF-Fragen + stabiler Papier/PDF-Fluss ===== */
 (function(){
   'use strict';
-  const BUILD='3.6-preview';
+  const BUILD='3.7-preview';
   const PAPER_KEY='ebt_bw_paper_exam_v1';
   const PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
   const FONT_KEY='ebt_bw_test_font_v33';
@@ -4926,9 +4997,9 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   window.__EBT_BUILD__=BUILD;
   document.documentElement.dataset.ebtBuild=BUILD;
   const badge=document.getElementById('previewBadgeV33');
-  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.6'}
+  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
   const versionSmall=document.querySelector('#versionToggle small');
-  if(versionSmall)versionSmall.textContent='Version 3.6 · Preview';
+  if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
 
   function sourceFor(q){return M[String(q?.globalId)]||null}
   function learnOriginalOn(){return !!readJSON(FONT_KEY,false)}
@@ -5164,13 +5235,13 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
 <script>
 (function(){
   'use strict';
-  const BUILD='3.6-preview',PAPER_KEY='ebt_bw_paper_exam_v1',PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
+  const BUILD='3.7-preview',PAPER_KEY='ebt_bw_paper_exam_v1',PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
   const M=window.BAMF_QUESTION_MEDIA_V36||window.BAMF_QUESTION_MEDIA_V35||{};
   const basePaperBuilder=window.buildPaperPagesV35||window.buildPaperPagesV31||null;
   window.__EBT_BUILD__=BUILD;document.documentElement.dataset.ebtBuild=BUILD;
-  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.6'}
-  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.6 · Preview';
-  const versionDetails=document.getElementById('versionDetails');if(versionDetails){const b=versionDetails.querySelector('b');if(b)b.textContent='Version 3.6 · Preview'}
+  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
+  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
+  const versionDetails=document.getElementById('versionDetails');if(versionDetails){const b=versionDetails.querySelector('b');if(b)b.textContent='Version 3.7 · Preview'}
 
   function shuffleV36(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
   function qByIdV36(id){return QUESTIONS.find(q=>Number(q.globalId)===Number(id))||null}
@@ -5222,7 +5293,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   function diagV36(step,text,level='ok'){diagRowsV36.push({step,text,level,time:new Date().toISOString()});renderDiagV36();window.__EBT_PDF_DIAG_V36__={build:BUILD,device:deviceTextV36(),rows:diagRowsV36.slice()}}
   function resetDiagV36(){diagRowsV36=[];if(diagSummary)diagSummary.textContent='Test läuft … '+deviceTextV36();renderDiagV36();diagV36('Gerät',deviceTextV36(),'ok')}
   document.getElementById('pdfDiagCopyV36')?.addEventListener('click',async()=>{
-    const text=['Einbürgerungstest BW - PDF-Diagnose 3.6',deviceTextV36(),...diagRowsV36.map(r=>`${r.level.toUpperCase()} | ${r.step} | ${r.text}`)].join('\n');
+    const text=['Einbürgerungstest BW - PDF-Diagnose 3.7',deviceTextV36(),...diagRowsV36.map(r=>`${r.level.toUpperCase()} | ${r.step} | ${r.text}`)].join('\n');
     try{await navigator.clipboard.writeText(text);alert('Diagnose kopiert.')}catch(e){prompt('Diagnose kopieren:',text)}
   });
   function clearPdfV36(){pdfBlobV36=null;if(pdfUrlV36){URL.revokeObjectURL(pdfUrlV36);pdfUrlV36=null}if(actions)actions.hidden=true;if(openLink)openLink.href='#';if(inlineFrame)inlineFrame.removeAttribute('src');if(inlineWrap)inlineWrap.hidden=true}
@@ -5246,6 +5317,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
     pdfBlobV36=new Blob([result.bytes],{type:'application/pdf'});pdfFileNameV36=result.fileName||'Einbuergerungstest-BW.pdf';pdfUrlV36=URL.createObjectURL(pdfBlobV36);
     if(openLink){openLink.href=pdfUrlV36;openLink.target='_blank'}if(actions)actions.hidden=false;if(inlineFrame)inlineFrame.src=pdfUrlV36;if(inlineWrap)inlineWrap.hidden=false;
     const bwPos=bwPositionsV36(qs);
+    try{window.savePaperHistoryV32?.(state,!!readJSON(PAPER_ONLY_KEY,false),true);window.__EBT_LAST_PAPER_FORM_V37__=state.formNo}catch(e){console.warn('Papierverlauf 3.7',e)}
     if(status){status.className='pdf-status-v33 small pdf-engine-ok-v34';status.textContent=`✓ PDF fertig · ${result.pageCount} Seiten · ${(pdfBlobV36.size/1024).toFixed(0)} KB · BW an Position ${bwPos.join(', ')}`}
     const meta=document.getElementById('paperPreviewMeta');if(meta)meta.textContent=`Zufallstest ${state.formNo}: 33 Fragen = 30 allgemein + 3 BW, vollständig gemischt · BW-Positionen ${bwPos.join(', ')} · ${readJSON(PAPER_ONLY_KEY,false)?'10 Frageseiten':'14 Seiten'}`;
     diagV36('PDF-Struktur',`${result.pageCount} Seiten · %PDF-Header gültig · ${(pdfBlobV36.size/1024).toFixed(0)} KB.`,'ok');diagV36('Blob-URL','Lokale PDF-Adresse erstellt und Inline-Vorschau gesetzt.','ok');
@@ -5294,6 +5366,148 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   document.getElementById('paperQuestionsOnly')?.addEventListener('change',()=>{clearPdfV36();if(status){status.className='pdf-status-v33 small muted';status.textContent='Druckumfang geändert - PDF bitte neu erzeugen.'}});
   window.generatePaperPdfV36=generatePdfV36;window.newPaperStateV36=newStateV36;
   try{renderLearn()}catch(e){console.error(e)}
+})();
+</script>
+
+
+<script id="v37-paper-review-controller">
+(function(){
+  'use strict';
+  const BUILD='3.7-preview';
+  const PAPER_HISTORY_KEY='ebt_bw_paper_history_v32';
+  const PAPER_KEY='ebt_bw_paper_exam_v1';
+  const M=window.BAMF_QUESTION_MEDIA_V36||window.BAMF_QUESTION_MEDIA_V35||{};
+  let currentItem=null;
+
+  window.__EBT_BUILD__=BUILD;
+  document.documentElement.dataset.ebtBuild=BUILD;
+  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
+  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
+  const vd=document.getElementById('versionDetails');if(vd){const b=vd.querySelector('b');if(b)b.textContent='Version 3.7 · Preview'}
+
+  const card=document.getElementById('paperReviewV37');
+  const list=document.getElementById('paperReviewListV37');
+  const meta=document.getElementById('paperReviewMetaV37');
+  const summary=document.getElementById('paperReviewSummaryV37');
+  const applyBtn=document.getElementById('paperReviewApplyStatsV37');
+  const saveHint=document.getElementById('paperReviewSaveHintV37');
+  const openBtn=document.getElementById('paperReviewOpenV37');
+
+  function history(){const h=readJSON(PAPER_HISTORY_KEY,[]);return Array.isArray(h)?h:[]}
+  function saveHistory(h){writeJSON(PAPER_HISTORY_KEY,h.slice(0,40))}
+  function findItem(formNo){return history().find(x=>x.formNo===formNo)||null}
+  function q(id){return QUESTIONS.find(x=>Number(x.globalId)===Number(id))||null}
+  function validIds(ids){return Array.isArray(ids)&&ids.length===33&&new Set(ids.map(Number)).size===33&&ids.filter(x=>Number(x)<=300).length===30&&ids.filter(x=>Number(x)>300).length===3}
+  function reviewObj(item){if(!item.review||typeof item.review!=='object')item.review={};if(!item.appliedReview||typeof item.appliedReview!=='object')item.appliedReview={};return item.review}
+  function persistCurrent(){
+    if(!currentItem)return;
+    let h=history(),i=h.findIndex(x=>x.formNo===currentItem.formNo);
+    if(i<0)h.unshift(currentItem);else h[i]={...h[i],...currentItem};
+    saveHistory(h);currentItem=h[i<0?0:i];
+  }
+  function counts(item){
+    const r=item?.review||{},a=item?.appliedReview||{};let correct=0,wrong=0;
+    for(const id of item?.ids||[]){if(r[String(id)]==='correct')correct++;else if(r[String(id)]==='wrong')wrong++}
+    const rated=correct+wrong,open=33-rated,applied=Object.keys(a).filter(id=>a[id]==='correct'||a[id]==='wrong').length;
+    return {correct,wrong,rated,open,applied,complete:rated===33,pass:rated===33?correct>=17:null};
+  }
+  function questionHtml(itemQ){
+    const m=M[String(itemQ.globalId)];
+    if(m?.kind==='image'&&m.dataUrl)return `<img src="${m.dataUrl}" alt="${esc(itemQ.question)}" width="${m.w||532}" height="${m.h||46}">`;
+    return `<div class="bamf-html-question-v35">${esc(m?.text||itemQ.question)}</div>`;
+  }
+  function renderSummary(){
+    if(!currentItem||!summary)return;
+    const c=counts(currentItem),pending=currentItem.ids.filter(id=>{
+      const k=String(id),r=currentItem.review?.[k],a=currentItem.appliedReview?.[k];return (r==='correct'||r==='wrong')&&!(a==='correct'||a==='wrong')
+    }).length;
+    summary.innerHTML=`<span class="paper-review-chip-v37 good">✓ ${c.correct} richtig</span><span class="paper-review-chip-v37 bad">✕ ${c.wrong} falsch</span><span class="paper-review-chip-v37 open">○ ${c.open} nicht bewertet</span>${c.complete?`<span class="paper-review-chip-v37 ${c.pass?'good':'bad'}">${c.pass?'Bestanden':'Nicht bestanden'} · ${c.correct}/33</span>`:''}`;
+    if(applyBtn){applyBtn.disabled=pending===0;applyBtn.textContent=pending?`${pending} neue Bewertung${pending===1?'':'en'} in Statistik übernehmen`:'Keine neuen Bewertungen für Statistik'}
+    if(saveHint)saveHint.innerHTML=c.applied?`${c.applied}/33 Bewertungen wurden bereits in deinen Lernstand übernommen. Nicht bewertete Fragen bleiben dort unberücksichtigt.`:'Deine Kontrolle wird sofort im Druckverlauf gespeichert. Erst der Button rechts übernimmt markierte Fragen in den Lernstand.';
+  }
+  function updateItemDom(id){
+    if(!currentItem)return;const k=String(id),r=currentItem.review?.[k]||'open',a=currentItem.appliedReview?.[k];
+    const row=list?.querySelector(`.paper-review-item-v37[data-id="${CSS.escape(k)}"]`);if(!row)return;
+    row.classList.remove('review-good','review-bad','review-open');row.classList.add(r==='correct'?'review-good':r==='wrong'?'review-bad':'review-open');
+    row.querySelectorAll('.paper-review-mark-v37').forEach(b=>{b.classList.toggle('selected',b.dataset.status===r);b.disabled=!!a});
+    const note=row.querySelector('.paper-review-applied-v37');if(note){note.textContent=a?`Bereits in Statistik übernommen: ${a==='correct'?'richtig':'falsch'}. Diese einzelne Wertung ist deshalb gesperrt.`:'';note.hidden=!a}
+  }
+  function renderReview(item){
+    if(!item||!validIds(item.ids)){alert('Dieser Drucktest ist unvollständig.');return}
+    if(!answerReady){alert('Der Antwortschlüssel wird noch geladen. Bitte kurz warten und dann erneut öffnen.');return}
+    currentItem={...item,review:{...(item.review||{})},appliedReview:{...(item.appliedReview||{})}};reviewObj(currentItem);
+    if(meta){const d=new Date(currentItem.createdAt||Date.now());meta.textContent=`${currentItem.formNo||'Drucktest'} · ${d.toLocaleDateString('de-DE')} · 33 Fragen in derselben Reihenfolge wie auf deiner PDF.`}
+    if(list){list.innerHTML=currentItem.ids.map((id,pos)=>{
+      const qq=q(id);if(!qq)return '';
+      const right=answerKey[qq.globalId],r=currentItem.review[String(id)]||'open',a=currentItem.appliedReview[String(id)];
+      const opts=qq.options.map((txt,i)=>`<div class="paper-review-option-v37 ${i===right?'correct':''}"><span class="paper-review-letter-v37">${['A','B','C','D'][i]}</span><span>${esc(txt)}</span>${i===right?'<span class="paper-review-right-v37">✓ richtig</span>':''}</div>`).join('');
+      return `<article class="paper-review-item-v37 ${r==='correct'?'review-good':r==='wrong'?'review-bad':'review-open'}" data-id="${id}"><div class="paper-review-qhead-v37"><span class="num">Frage ${pos+1} · Katalog ${id}${qq.type==='bw'?' · BW':''}</span><span class="small muted">${a?'Statistik ✓':'Kontrolle'}</span></div><div class="paper-review-question-v37">${questionHtml(qq)}</div><div class="paper-review-options-v37">${opts}</div><div class="paper-review-controls-v37"><button class="paper-review-mark-v37 ${r==='correct'?'selected':''}" type="button" data-id="${id}" data-status="correct" ${a?'disabled':''}>✓ Hatte ich richtig</button><button class="paper-review-mark-v37 ${r==='wrong'?'selected':''}" type="button" data-id="${id}" data-status="wrong" ${a?'disabled':''}>✕ Hatte ich falsch</button><button class="paper-review-mark-v37 ${r==='open'?'selected':''}" type="button" data-id="${id}" data-status="open" ${a?'disabled':''}>○ Nicht werten</button></div><div class="paper-review-applied-v37" ${a?'':'hidden'}>${a?`Bereits in Statistik übernommen: ${a==='correct'?'richtig':'falsch'}. Diese einzelne Wertung ist deshalb gesperrt.`:''}</div></article>`;
+    }).join('')}
+    renderSummary();if(card)card.hidden=false;card?.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function openByForm(formNo){const item=findItem(formNo);if(!item){alert('Dieser Papierbogen wurde im Verlauf nicht gefunden.');return}setTab('exam');document.getElementById('examIntro').hidden=false;renderReview(item)}
+  window.openPaperReviewV37=openByForm;
+
+  list?.addEventListener('click',e=>{
+    const b=e.target.closest('.paper-review-mark-v37');if(!b||!currentItem)return;
+    const k=String(b.dataset.id),status=b.dataset.status;if(currentItem.appliedReview?.[k])return;
+    if(status==='open')delete currentItem.review[k];else currentItem.review[k]=status;
+    currentItem.reviewUpdatedAt=new Date().toISOString();persistCurrent();updateItemDom(k);renderSummary();decorateAll();
+  });
+  applyBtn?.addEventListener('click',()=>{
+    if(!currentItem)return;const pending=currentItem.ids.filter(id=>{const k=String(id),r=currentItem.review?.[k],a=currentItem.appliedReview?.[k];return (r==='correct'||r==='wrong')&&!(a==='correct'||a==='wrong')});
+    if(!pending.length)return;
+    if(!confirm(`${pending.length} neue Bewertung${pending.length===1?'':'en'} in die Statistik übernehmen? Bereits übernommene Einzelwertungen können danach nicht wieder entfernt werden.`))return;
+    for(const id of pending){const k=String(id),st=currentItem.review[k];recordResult(Number(id),st==='correct');currentItem.appliedReview[k]=st}
+    currentItem.statsAppliedAt=new Date().toISOString();persistCurrent();renderReview(currentItem);try{renderOverview();renderStats()}catch(e){}decorateAll();
+  });
+  document.getElementById('paperReviewCloseV37')?.addEventListener('click',()=>{if(card)card.hidden=true});
+  openBtn?.addEventListener('click',()=>{
+    const state=readJSON(PAPER_KEY,null),form=window.__EBT_LAST_PAPER_FORM_V37__||state?.formNo;if(!form){alert('Noch kein Papier-Test vorhanden.');return}openByForm(form)
+  });
+
+  function addReviewStateToPaperArchive(){
+    const h=history(),items=[...document.querySelectorAll('#paperHistoryV32 .paper-history-item-v32')];
+    items.forEach((el,i)=>{
+      const item=h[i];if(!item)return;const c=counts(item),actions=el.querySelector('.paper-history-actions-v32');
+      if(actions&&!actions.querySelector('[data-v37-paper-review]')){const b=document.createElement('button');b.className='btn compact';b.type='button';b.dataset.v37PaperReview=item.formNo;b.textContent='✓ Antworten abgleichen';actions.prepend(b)}
+      let state=el.querySelector('.paper-history-review-state-v37');if(!state){state=document.createElement('div');state.className='paper-history-review-state-v37';el.querySelector('.paper-history-inline-v32')?.appendChild(state)}
+      if(state)state.textContent=c.complete?`Kontrolle vollständig: ${c.correct}/33 · ${c.pass?'bestanden':'nicht bestanden'} · ${c.applied}/33 in Statistik`:`Kontrolle: ${c.rated}/33 bewertet · ${c.applied}/33 in Statistik`;
+    });
+    document.querySelectorAll('[data-v37-paper-review]').forEach(b=>{if(b.dataset.boundV37)return;b.dataset.boundV37='1';b.addEventListener('click',()=>openByForm(b.dataset.v37PaperReview))});
+  }
+
+  function addPaperToMainHistory(){
+    const box=document.getElementById('history');if(!box)return;box.querySelectorAll('.paper-main-v37,.paper-main-label-v37').forEach(x=>x.remove());
+    const h=history();if(!h.length)return;
+    const label=document.createElement('div');label.className='paper-main-label-v37 small muted';label.style.cssText='margin:5px 0 2px;font-weight:800';label.textContent='Papierprüfungen';box.prepend(label);
+    [...h].reverse().forEach(item=>{
+      const c=counts(item),d=new Date(item.createdAt||Date.now()),wrap=document.createElement('div');
+      wrap.className='history-item-v32 paper-main-v37 '+(c.complete?(c.pass?'complete-pass':'complete-fail'):'');
+      const status=c.complete?(c.pass?'Bestanden':'Nicht bestanden'):(c.rated?`${c.rated}/33 kontrolliert`:'Offen');
+      wrap.innerHTML=`<button class="history-head-v32" type="button" data-v37-main-toggle><span><b>Papierprüfung · ${d.toLocaleDateString('de-DE')} · ${esc(item.formNo||'Drucktest')}</b><br><span class="small muted">30 allgemein + 3 BW · ${c.rated?`${c.correct} richtig · ${c.wrong} falsch · `:''}${c.rated}/33 bewertet · ${c.applied}/33 Statistik</span></span><span class="history-status-v32">${status}</span></button><div class="history-inline-v32" hidden><div class="history-actions-v32"><button class="btn compact" type="button" data-v37-main-review="${esc(item.formNo||'')}">✓ Antworten abgleichen</button><button class="btn compact" type="button" data-v37-main-digital="${esc(item.formNo||'')}">▶ Digital wiederholen</button></div><div class="small muted">Die 33 Fragen bleiben in exakt derselben Reihenfolge gespeichert. Nicht bewertete Papierfragen beeinflussen deinen Lernstand nicht.</div></div>`;
+      box.insertBefore(wrap,label.nextSibling);
+    });
+    box.querySelectorAll('[data-v37-main-toggle]').forEach(b=>b.addEventListener('click',()=>{const x=b.nextElementSibling;x.hidden=!x.hidden}));
+    box.querySelectorAll('[data-v37-main-review]').forEach(b=>b.addEventListener('click',()=>openByForm(b.dataset.v37MainReview)));
+    box.querySelectorAll('[data-v37-main-digital]').forEach(b=>b.addEventListener('click',()=>{const item=findItem(b.dataset.v37MainDigital);if(item)window.startPaperExamV32?.(item.ids)}));
+    const s=document.getElementById('examSummary');if(s){const digital=examHistory.length?`${examHistory.filter(x=>x.pass).length}/${examHistory.length} digital bestanden`:'0 digitale Prüfungen',complete=h.filter(x=>counts(x).complete),paperPass=complete.filter(x=>counts(x).pass).length;s.textContent=`${digital} · ${h.length} Papier (${complete.length} vollständig kontrolliert${complete.length?`, ${paperPass} bestanden`:''})`}
+  }
+  function decorateAll(){addReviewStateToPaperArchive();addPaperToMainHistory()}
+
+  // RenderStats nach allen älteren Wrappern erweitern.
+  const statsBase=renderStats;renderStats=function(){statsBase();setTimeout(decorateAll,0)};
+  document.querySelector('[data-tab="stats"]')?.addEventListener('click',()=>setTimeout(decorateAll,20));
+
+  // Nach jeder erfolgreichen PDF-Erzeugung ist der Bogen bereits über den 3.6-Kern gespeichert.
+  ['generatePaperExam','paperPreviewNew','paperPreviewPrint'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>setTimeout(()=>{const st=readJSON(PAPER_KEY,null);if(st?.formNo){window.__EBT_LAST_PAPER_FORM_V37__=st.formNo;decorateAll()}},40)));
+
+  // Backup-Export nimmt den Papierverlauf ab jetzt mit.
+  const makeBase=makeSnapshot;makeSnapshot=function(){const d=makeBase();d.paperHistory=history();d.version=7;return d};
+  // Zusätzlicher Import-Hook nur für den Papierverlauf; der bestehende Import verarbeitet weiterhin Lernstand/Prüfungen.
+  document.getElementById('importFile')?.addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{let data=JSON.parse((await f.text()).replace(/^\uFEFF/,'').trim());if(data&&typeof data==='object'&&data.data&&!data.progress)data=typeof data.data==='string'?JSON.parse(data.data):data.data;if(Array.isArray(data?.paperHistory)){saveHistory(data.paperHistory);setTimeout(decorateAll,50)}}catch(err){} });
+
+  setTimeout(decorateAll,60);
 })();
 </script>
 

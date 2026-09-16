@@ -1,4 +1,4 @@
-const CACHE="ebt-bw-preview-3-6-assets";
+const CACHE="ebt-bw-preview-3-7-assets";
 const CORE=[
   "./manifest.webmanifest",
   "./apple-touch-icon.png",
