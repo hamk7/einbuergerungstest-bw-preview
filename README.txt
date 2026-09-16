@@ -1,15 +1,15 @@
-Einbürgerungstest BW – Version 3.7.1 PREVIEW
+Einbürgerungstest BW – Version 3.7.2 PREVIEW
 
-Änderung gegenüber 3.7:
-- Kontrollansicht des gedruckten Tests auf iPhone-Hochformat korrigiert.
-- BAMF-Fragegrafiken werden innerhalb der Fragenkarte eingepasst und schneiden rechts nichts mehr ab.
-- Fragegrafik kann angetippt und im vorhandenen großen Leser geöffnet werden.
-- Antworten und Bewertungsbuttons sind mobil auf 100 % Breite begrenzt.
-- Lange Texte dürfen umbrechen; kein horizontaler Überlauf durch Mindestbreiten.
-- Statistik-Übernehmen-Leiste ist im Hochformat einspaltig.
-- PDF-Erzeugung und Papierprüfungslogik aus 3.7 bleiben unverändert.
+Neu gegenüber 3.7.1:
+- Papierprüfung-Kontrolle stark komprimiert.
+- Standardmäßig pro Frage nur: Frage/Katalognummer, richtige Lösung und drei Bewertungsfelder.
+- Richtig ist dauerhaft grün hinterlegt, Falsch dauerhaft rot, Keine Wertung neutral.
+- Gewählte Bewertung wird stärker hervorgehoben.
+- Vollständige Frage + alle Antworten nur noch optional über „Frage & Antworten anzeigen“.
+- Wer nur falsche Fragen markiert, übernimmt auch nur diese falschen Fragen in die Statistik.
+- Nicht markierte Fragen bleiben vollständig ohne Wertung.
+- PDF-Erzeugung und Papierprüfungsauswahl aus 3.7/3.7.1 unverändert.
 
 GitHub Pages:
-Alle 7 Dateien hochladen/ersetzen.
-Danach die Preview einmal mit ?v=371 öffnen.
-Oben muss TESTVERSION 3.7.1 stehen.
+Alle 7 Dateien ersetzen und Preview mit ?v=372 öffnen.
+Oben muss TESTVERSION 3.7.2 stehen.
