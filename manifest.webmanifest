@@ -1,13 +1,13 @@
 {
-  "name": "Einbürgerungstest BW – Preview 3.7.2",
-  "short_name": "Einbürgerung BW",
-  "description": "Preview 3.7.2: kompakte Papierkontrolle mit Lösung sowie farbigen Richtig/Falsch/Keine-Wertung-Schaltern.",
+  "name": "Einbürgerungstest BW – Preview 3.7.3",
+  "short_name": "Einbürgerungstest",
+  "description": "Einbürgerungstest Baden-Württemberg – Preview 3.7.3",
+  "lang": "de",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#101318",
-  "theme_color": "#101318",
-  "lang": "de",
+  "background_color": "#f5f7fb",
+  "theme_color": "#2463eb",
   "icons": [
     {
       "src": "icon-192.png",

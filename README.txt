@@ -1,15 +1,22 @@
-Einbürgerungstest BW – Version 3.7.2 PREVIEW
+Einbürgerungstest BW – Version 3.7.3 PREVIEW
 
-Neu gegenüber 3.7.1:
-- Papierprüfung-Kontrolle stark komprimiert.
-- Standardmäßig pro Frage nur: Frage/Katalognummer, richtige Lösung und drei Bewertungsfelder.
-- Richtig ist dauerhaft grün hinterlegt, Falsch dauerhaft rot, Keine Wertung neutral.
-- Gewählte Bewertung wird stärker hervorgehoben.
-- Vollständige Frage + alle Antworten nur noch optional über „Frage & Antworten anzeigen“.
-- Wer nur falsche Fragen markiert, übernimmt auch nur diese falschen Fragen in die Statistik.
-- Nicht markierte Fragen bleiben vollständig ohne Wertung.
-- PDF-Erzeugung und Papierprüfungsauswahl aus 3.7/3.7.1 unverändert.
+Neu:
+- Kontrollansicht etwas größer und besser lesbar.
+- PDF-Diagnose aus der Oberfläche entfernt.
+- PDF-Systemtest entfernt.
+- Papier-Simulation aus der Oberfläche entfernt.
+- Keine zusätzliche Inline-PDF-Vorschau und keine zusätzlichen PDF-Schaltflächen.
+- Im Prüfungsbereich bleiben nur:
+  1. normale digitale Prüfung
+  2. Schalter „Nur Fragen drucken“
+  3. Button „PDF erstellen“
+- PDF erstellen: weiterhin 30 zufällige allgemeine + 3 zufällige BW-Fragen,
+  anschließend alle 33 gemischt.
+- Das PDF öffnet weiterhin direkt.
+- Der Drucktest wird weiterhin im Prüfungsverlauf gespeichert.
+- Kontrolle/Statistik erfolgt weiterhin über den Prüfungsverlauf.
 
-GitHub Pages:
-Alle 7 Dateien ersetzen und Preview mit ?v=372 öffnen.
-Oben muss TESTVERSION 3.7.2 stehen.
+GitHub:
+Alle 7 Dateien ersetzen.
+Preview danach einmal mit ?v=373 öffnen.
+Oben muss TESTVERSION 3.7.3 stehen.
