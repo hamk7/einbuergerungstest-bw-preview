@@ -1,4 +1,4 @@
-const CACHE="ebt-bw-preview-3-7-3-assets";
+const CACHE="ebt-bw-preview-3-7-4-assets";
 const CORE=["./manifest.webmanifest","./apple-touch-icon.png","./icon-192.png","./icon-512.png"];
 
 self.addEventListener("install",event=>{

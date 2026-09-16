@@ -1,7 +1,7 @@
 {
-  "name": "Einbürgerungstest BW – Preview 3.7.3",
+  "name": "Einbürgerungstest BW – Preview 3.7.4",
   "short_name": "Einbürgerungstest",
-  "description": "Einbürgerungstest Baden-Württemberg – Preview 3.7.3",
+  "description": "Preview 3.7.4: PDF-Kontrolle direkt nach Rückkehr; Papierkontrolle wird beim Start jeder digitalen Prüfung sicher geschlossen.",
   "lang": "de",
   "start_url": "./",
   "scope": "./",
