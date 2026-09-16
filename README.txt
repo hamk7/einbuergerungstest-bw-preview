@@ -1,19 +1,15 @@
-Einbürgerungstest BW – Version 3.7 PREVIEW
+Einbürgerungstest BW – Version 3.7.1 PREVIEW
 
-Neu in 3.7:
-- Papierprüfung wird beim PDF-Erzeugen sofort im Verlauf gespeichert.
-- „Antworten kontrollieren“ zeigt exakt dieselben 33 Fragen in derselben Reihenfolge.
-- Zu jeder Frage werden alle vier Antworten und die richtige Antwort angezeigt.
-- Optional markieren: „Hatte ich richtig“, „Hatte ich falsch“ oder „Nicht werten“.
-- Nicht bewertete Fragen werden NICHT in den Lernstand / die Statistik übernommen.
-- Bewertungen können zunächst frei geändert werden. Erst „in Statistik übernehmen“ schreibt sie in den Lernstand.
-- Bereits übernommene Einzelbewertungen werden gesperrt, damit sie nicht doppelt gezählt werden.
-- Papierprüfungen erscheinen zusätzlich direkt im allgemeinen Prüfungsverlauf.
-- Unvollständig kontrollierte Papierprüfungen erhalten kein künstliches Bestanden/Nicht-bestanden-Ergebnis.
-- Bei 33/33 kontrollierten Fragen wird das Ergebnis ab 17 richtigen Antworten angezeigt.
-- Papierverlauf wird jetzt auch in den manuellen JSON-Export aufgenommen.
-- PDF-Funktion aus 3.6 bleibt unverändert: 30 allgemeine + 3 zufällige BW, vollständig gemischt, PDF mit einem Tippen.
+Änderung gegenüber 3.7:
+- Kontrollansicht des gedruckten Tests auf iPhone-Hochformat korrigiert.
+- BAMF-Fragegrafiken werden innerhalb der Fragenkarte eingepasst und schneiden rechts nichts mehr ab.
+- Fragegrafik kann angetippt und im vorhandenen großen Leser geöffnet werden.
+- Antworten und Bewertungsbuttons sind mobil auf 100 % Breite begrenzt.
+- Lange Texte dürfen umbrechen; kein horizontaler Überlauf durch Mindestbreiten.
+- Statistik-Übernehmen-Leiste ist im Hochformat einspaltig.
+- PDF-Erzeugung und Papierprüfungslogik aus 3.7 bleiben unverändert.
 
 GitHub Pages:
 Alle 7 Dateien hochladen/ersetzen.
-Danach die Preview einmal mit ?v=370 öffnen. Oben muss TESTVERSION 3.7 stehen.
+Danach die Preview einmal mit ?v=371 öffnen.
+Oben muss TESTVERSION 3.7.1 stehen.

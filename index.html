@@ -923,8 +923,146 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
 }
 </style>
 
+
+<style id="v371-paper-review-mobile-fix">
+.paper-review-v37,
+.paper-review-head-v37,
+.paper-review-info-v37,
+.paper-review-list-v37,
+.paper-review-item-v37,
+.paper-review-qhead-v37,
+.paper-review-question-v37,
+.paper-review-options-v37,
+.paper-review-controls-v37,
+.paper-review-savebar-v37{
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+}
+.paper-review-v37{overflow-x:hidden}
+.paper-review-list-v37{width:100%}
+.paper-review-item-v37{width:100%;overflow:hidden}
+.paper-review-qhead-v37>*{min-width:0}
+.paper-review-question-v37{width:100%;overflow:hidden}
+.paper-review-question-v37 img.paper-review-bamf-img-v371{
+  display:block;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  height:auto!important;
+  object-fit:contain;
+  object-position:left center;
+  background:#fff;
+  cursor:zoom-in;
+  touch-action:manipulation;
+}
+.paper-review-question-hint-v371{
+  margin-top:4px;
+  font-size:10px;
+  line-height:1.25;
+  color:var(--muted);
+}
+.paper-review-option-v37{
+  min-width:0;
+  width:100%;
+  box-sizing:border-box;
+}
+.paper-review-option-v37>span:nth-child(2){
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.paper-review-mark-v37{
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  text-align:center;
+}
+.paper-review-savebar-v37>*{min-width:0}
+#paperReviewApplyStatsV37{
+  min-width:0;
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+
+@media(max-width:620px){
+  .paper-review-v37{margin-left:0;margin-right:0;border-radius:12px}
+  .paper-review-head-v37{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px;
+    padding:12px 10px 10px;
+  }
+  .paper-review-head-v37 .small{overflow-wrap:anywhere}
+  .paper-review-info-v37{padding:10px}
+  .paper-review-summary-v37{gap:5px}
+  .paper-review-chip-v37{font-size:11px;padding:5px 8px}
+  .paper-review-list-v37{padding:8px;gap:9px}
+  .paper-review-item-v37{padding:10px 8px;border-radius:11px}
+  .paper-review-qhead-v37{
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:4px 8px;
+    margin-bottom:7px;
+  }
+  .paper-review-qhead-v37 .num{
+    font-size:14px;
+    line-height:1.25;
+    overflow-wrap:anywhere;
+  }
+  .paper-review-question-v37{margin:5px 0 9px}
+  .paper-review-question-v37 .bamf-html-question-v35{
+    font-size:16px;
+    line-height:1.3;
+    overflow-wrap:anywhere;
+  }
+  .paper-review-options-v37{gap:5px;margin-top:7px}
+  .paper-review-option-v37{
+    grid-template-columns:24px minmax(0,1fr);
+    gap:7px;
+    padding:8px;
+    font-size:15px;
+    line-height:1.25;
+  }
+  .paper-review-right-v37{
+    grid-column:2;
+    white-space:normal;
+    margin-top:1px;
+  }
+  .paper-review-controls-v37{
+    grid-template-columns:1fr;
+    gap:6px;
+    width:100%;
+    margin-top:9px;
+  }
+  .paper-review-mark-v37{
+    min-height:44px;
+    padding:9px 10px;
+    font-size:14px;
+    line-height:1.2;
+  }
+  .paper-review-savebar-v37{
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:10px;
+  }
+  #paperReviewApplyStatsV37{width:100%}
+}
+
+@media(max-width:390px){
+  .paper-review-list-v37{padding:6px}
+  .paper-review-item-v37{padding:9px 7px}
+  .paper-review-chip-v37{font-size:10.5px}
+  .paper-review-option-v37{font-size:14px}
+}
+</style>
+
 </head>
-<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.7</div>
+<body><div id="previewBadgeV33" class="preview-badge-v33">TESTVERSION 3.7.1</div>
 <div class="top-actions" aria-label="Schnellaktionen">
   <button id="pauseExamTop" class="icon-btn" type="button" aria-label="Prüfung pausieren" hidden><span class="pause-glyph">Ⅱ</span></button>
   <button id="menuToggle" class="icon-btn menu-icon" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -967,7 +1105,7 @@ html[data-theme="dark"] .bamf-question-stage-v36{border-color:#38414e}
       <div class="menu-stack"><button id="exportProgress" class="btn" type="button">Fortschritt exportieren</button><label class="btn" for="importFile" style="cursor:pointer;text-align:center">Fortschritt importieren</label><input id="importFile" type="file" accept="application/json" hidden></div>
       <p id="backupSupportHint" class="small muted">Der Fortschritt wird nach jeder Änderung lokal gespeichert.</p>
     </section>
-    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.7 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
+    <section class="menu-section"><button id="versionToggle" class="menu-row" type="button"><span><b>Version</b><small>Version 3.3</small></span><span>›</span></button><div id="versionDetails" class="version-details" hidden><b>Version 3.7.1 · Preview</b><ul><li>Preview-Speicher vom echten Lernstand getrennt</li><li>Echte PDF-Erstellung + iOS Teilen/Drucken statt Popup-Druck</li><li>310/310 türkische Fragen, 1240 Antworten und Erklärungen lokal eingebettet</li><li>Feste Zurück/Nächste-Leiste und kein Doppel-Tipp-Zoom auf Buttons</li><li>Lernfilter farbig; Neu/Offen neutral, Bearbeitet blau</li><li>Lern-Fortschrittsleiste im Fragefenster entfernt</li><li>Optionale BAMF-nahe Muster-Test-Schrift</li><li>Druckverlauf mit exakt gespeicherten 33 Fragen pro Papierbogen</li><li>Gedruckten Test digital wiederholen oder als Lernset öffnen</li><li>Unauffälliger QR-Code auf der ersten Seite zum digitalen Fortsetzen</li><li>QR-Link funktioniert geräteübergreifend ohne Benutzerkonto oder Datenbank</li><li>Lernansicht vereinfacht: Filter separat, Stern oben, Zufall/Türkisch außerhalb der Frage, Tipp/Erklärung nebeneinander</li><li>Übersichtsfilter und Lernfilter vollständig getrennt</li><li>Prüfungsverlauf klappt direkt an der jeweiligen Prüfung auf; Wiederholen/Üben/Fehlerlernen möglich</li><li>Bildfragen auch nach Beantwortung vergrößerbar; Bildvorschau in Prüfungsauswertungen</li><li>Druckansicht mit neuem Tab + Safari/AirPrint-Fallback</li><li>Bilder durch Antippen im Vollbild</li><li>Lernfilter startet sofort auf einer passenden Frage; bei Zufall zufällig innerhalb des Filters</li><li>Prüfung als fokussierte Ansicht mit 5-Fragen-Navigation und „Alle anzeigen“</li><li>Papierbogen: jeder neue Bogen neu zufällig; gespeicherter „Nur Fragen“-Schalter</li>
 <li>Menü oben rechts mit Hell / Dunkel / System</li><li>Mehrfachfilter mit Live-Zahlen und ausgegrauten 0-Treffern</li><li>Kompakter Lernmodus mit ★, 💡, 🇹🇷- und 🔀-Schaltern</li><li>Lernziel zeigt Resttage, empfohlenes Tagespensum und heutigen Fortschritt</li><li>Prüfungsauswertung und Prüfungsverlauf mit Frage-Details überarbeitet</li>
 <li>Pause nur während einer laufenden Prüfung; Fortsetzen über ▶ oder Pause-Fenster</li>
 <li>Fragen mit ★ markieren und gezielt lernen</li>
@@ -4052,7 +4190,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Preview is intentionally isolated from the stable github.io page.
   const previewBadge=document.getElementById("previewBadgeV33");
-  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.7";}
+  if(previewBadge){previewBadge.hidden=false;previewBadge.textContent="TESTVERSION 3.7.1";}
 
   // Fully local Turkish dataset. Do not mutate QUESTIONS or German answers.
   const previousTrForV33=trFor;
@@ -4212,7 +4350,7 @@ const TR_STATIC_V33={"1":{"question":"Almanya'da insanlar hükümete karşı aç
 
   // Version display.
   const versionSmall=document.querySelector("#versionToggle small");
-  if(versionSmall)versionSmall.textContent="Version 3.7 · Preview";
+  if(versionSmall)versionSmall.textContent="Version 3.7.1 · Preview";
 })();
 </script>
 
@@ -4644,7 +4782,7 @@ document.documentElement.dataset.ebtBuild="3.6-preview";
 <script>
 /* ===== Version 3.4 Preview - finaler Controller ===== */
 (function(){
-  const BUILD='3.7-preview';
+  const BUILD='3.7.1-preview';
   const FONT_KEY='ebt_bw_test_font_v33';
   const PAPER_KEY='ebt_bw_paper_exam_v1';
   const PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
@@ -4653,9 +4791,9 @@ document.documentElement.dataset.ebtBuild="3.6-preview";
   window.__EBT_BUILD__=BUILD;
   document.documentElement.dataset.ebtBuild=BUILD;
   const badge=document.getElementById('previewBadgeV33');
-  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
+  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7.1'}
   const versionSmall=document.querySelector('#versionToggle small');
-  if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
+  if(versionSmall)versionSmall.textContent='Version 3.7.1 · Preview';
 
   /* --- Prüfungsdarstellung: alter Handler wird entfernt, Einstellung bleibt erhalten. --- */
   const oldFont=document.getElementById('menuTestFontV33');
@@ -4988,7 +5126,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
 /* ===== Version 3.5: Original-BAMF-Fragen + stabiler Papier/PDF-Fluss ===== */
 (function(){
   'use strict';
-  const BUILD='3.7-preview';
+  const BUILD='3.7.1-preview';
   const PAPER_KEY='ebt_bw_paper_exam_v1';
   const PAPER_ONLY_KEY='ebt_bw_paper_questions_only_v1';
   const FONT_KEY='ebt_bw_test_font_v33';
@@ -4997,9 +5135,9 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   window.__EBT_BUILD__=BUILD;
   document.documentElement.dataset.ebtBuild=BUILD;
   const badge=document.getElementById('previewBadgeV33');
-  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
+  if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7.1'}
   const versionSmall=document.querySelector('#versionToggle small');
-  if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
+  if(versionSmall)versionSmall.textContent='Version 3.7.1 · Preview';
 
   function sourceFor(q){return M[String(q?.globalId)]||null}
   function learnOriginalOn(){return !!readJSON(FONT_KEY,false)}
@@ -5239,9 +5377,9 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   const M=window.BAMF_QUESTION_MEDIA_V36||window.BAMF_QUESTION_MEDIA_V35||{};
   const basePaperBuilder=window.buildPaperPagesV35||window.buildPaperPagesV31||null;
   window.__EBT_BUILD__=BUILD;document.documentElement.dataset.ebtBuild=BUILD;
-  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
-  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
-  const versionDetails=document.getElementById('versionDetails');if(versionDetails){const b=versionDetails.querySelector('b');if(b)b.textContent='Version 3.7 · Preview'}
+  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7.1'}
+  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7.1 · Preview';
+  const versionDetails=document.getElementById('versionDetails');if(versionDetails){const b=versionDetails.querySelector('b');if(b)b.textContent='Version 3.7.1 · Preview'}
 
   function shuffleV36(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
   function qByIdV36(id){return QUESTIONS.find(q=>Number(q.globalId)===Number(id))||null}
@@ -5373,7 +5511,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
 <script id="v37-paper-review-controller">
 (function(){
   'use strict';
-  const BUILD='3.7-preview';
+  const BUILD='3.7.1-preview';
   const PAPER_HISTORY_KEY='ebt_bw_paper_history_v32';
   const PAPER_KEY='ebt_bw_paper_exam_v1';
   const M=window.BAMF_QUESTION_MEDIA_V36||window.BAMF_QUESTION_MEDIA_V35||{};
@@ -5381,9 +5519,9 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
 
   window.__EBT_BUILD__=BUILD;
   document.documentElement.dataset.ebtBuild=BUILD;
-  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7'}
-  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7 · Preview';
-  const vd=document.getElementById('versionDetails');if(vd){const b=vd.querySelector('b');if(b)b.textContent='Version 3.7 · Preview'}
+  const badge=document.getElementById('previewBadgeV33');if(badge){badge.hidden=false;badge.textContent='TESTVERSION 3.7.1'}
+  const versionSmall=document.querySelector('#versionToggle small');if(versionSmall)versionSmall.textContent='Version 3.7.1 · Preview';
+  const vd=document.getElementById('versionDetails');if(vd){const b=vd.querySelector('b');if(b)b.textContent='Version 3.7.1 · Preview'}
 
   const card=document.getElementById('paperReviewV37');
   const list=document.getElementById('paperReviewListV37');
@@ -5413,7 +5551,7 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   }
   function questionHtml(itemQ){
     const m=M[String(itemQ.globalId)];
-    if(m?.kind==='image'&&m.dataUrl)return `<img src="${m.dataUrl}" alt="${esc(itemQ.question)}" width="${m.w||532}" height="${m.h||46}">`;
+    if(m?.kind==='image'&&m.dataUrl)return `<img class="paper-review-bamf-img-v371" src="${m.dataUrl}" alt="${esc(itemQ.question)}" width="${m.w||532}" height="${m.h||46}"><div class="paper-review-question-hint-v371">Antippen zum Vergrößern</div>`;
     return `<div class="bamf-html-question-v35">${esc(m?.text||itemQ.question)}</div>`;
   }
   function renderSummary(){
@@ -5447,6 +5585,24 @@ window.BAMF_QUESTION_MEDIA_V36=window.BAMF_QUESTION_MEDIA_V35;
   }
   function openByForm(formNo){const item=findItem(formNo);if(!item){alert('Dieser Papierbogen wurde im Verlauf nicht gefunden.');return}setTab('exam');document.getElementById('examIntro').hidden=false;renderReview(item)}
   window.openPaperReviewV37=openByForm;
+
+  list?.addEventListener('click',e=>{
+    const img=e.target.closest('.paper-review-bamf-img-v371');
+    if(!img)return;
+    e.preventDefault();
+    e.stopPropagation();
+    const viewer=document.getElementById('imageViewer'),viewerImg=document.getElementById('imageViewerImg');
+    if(!viewer||!viewerImg)return;
+    viewer.classList.add('question-reader-v36');
+    const originalW=Number(img.getAttribute('width'))||img.naturalWidth||532;
+    const desired=Math.min(980,Math.max(620,Math.round(originalW*1.55)));
+    viewer.style.setProperty('--viewer-question-width-v36',desired+'px');
+    viewerImg.src=img.currentSrc||img.src;
+    viewerImg.alt=img.alt||'BAMF-Frage vergrößert';
+    viewer.hidden=false;
+    viewer.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+  });
 
   list?.addEventListener('click',e=>{
     const b=e.target.closest('.paper-review-mark-v37');if(!b||!currentItem)return;
