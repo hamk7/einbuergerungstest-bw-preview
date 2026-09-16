@@ -1,6 +1,6 @@
 {
-  "name": "Einbürgerungstest Baden-Württemberg – Preview 3.3.2",
-  "short_name": "Einbürgerung Preview",
+  "name": "Einbürgerungstest BW",
+  "short_name": "Einbürgerung BW",
   "description": "Preview/Testversion 3.3.2 der Einbürgerungstest-Lern-App",
   "start_url": "./",
   "scope": "./",
